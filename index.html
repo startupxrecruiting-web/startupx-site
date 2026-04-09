@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>StartupX — Founder-First Recruiting</title>
   <meta name="description" content="StartupX places startup-ready operators for Seed–Series A founders in Toronto, Montreal, and Vancouver. 2–3 curated candidates in days. No cost until you hire." />
+  <!-- FAVICON: Replace data URI below with <link rel="icon" href="startupx-favicon.png"> once you have a real PNG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23080808'/%3E%3Cpolygon points='4,5 16,19 4,32 4,5' fill='%23CBC6BB'/%3E%3Cpolygon points='28,5 16,19 28,32 28,5' fill='%23CBC6BB'/%3E%3Ccircle cx='16' cy='29' r='3' fill='%23B87333'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -42,6 +44,7 @@
       font-size: 17px;
     }
 
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━ NAV ━━━━━━━━━━━━━━━━━━━━━━━━ */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
@@ -58,6 +61,7 @@
     }
     .nav-link:hover { color: var(--cream); }
 
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━ BUTTONS ━━━━━━━━━━━━━━━━━━━━━━━━ */
     .btn {
       display: inline-flex; align-items: center; gap: 8px;
       font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700;
@@ -91,6 +95,7 @@
     }
     .btn-nav:hover { background: var(--cream-dim); border-color: var(--cream-lo); }
 
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━ HERO ━━━━━━━━━━━━━━━━━━━━━━━━ */
     .hero {
       min-height: 100vh;
       background: var(--black);
@@ -105,6 +110,7 @@
                   radial-gradient(ellipse 50% 50% at 20% 70%, rgba(203,198,187,0.04) 0%, transparent 60%);
       pointer-events: none;
     }
+    /* Subtle grid texture */
     .hero::after {
       content: '';
       position: absolute; inset: 0;
@@ -174,6 +180,7 @@
       text-transform: uppercase; color: var(--cream-lo);
     }
 
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━ SECTION BASE ━━━━━━━━━━━━━━━━━━━━━━━━ */
     section { padding: 100px 52px; }
     .section-inner { max-width: 1180px; margin: 0 auto; }
 
@@ -198,6 +205,7 @@
       font-weight: 700; line-height: 1.25;
     }
 
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━ PROBLEM ━━━━━━━━━━━━━━━━━━━━━━━━ */
     .problem-section {
       background: var(--dark-1);
       border-top: 1px solid var(--border-dark);
@@ -252,6 +260,7 @@
     }
     .mid-cta-band p span { color: var(--copper); }
 
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━ HOW IT WORKS ━━━━━━━━━━━━━━━━━━━━━━━━ */
     .how-section {
       background: var(--warm-bg);
     }
@@ -296,6 +305,7 @@
       letter-spacing: 0.02em;
     }
 
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━ WHO IT'S FOR ━━━━━━━━━━━━━━━━━━━━━━━━ */
     .for-section {
       background: var(--dark-2);
       border-top: 1px solid var(--border-dark);
@@ -353,6 +363,7 @@
     }
     .qualifier p strong { color: var(--cream); font-weight: 600; }
 
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━ PROOF ━━━━━━━━━━━━━━━━━━━━━━━━ */
     .proof-section {
       background: var(--black);
       border-top: 1px solid var(--border-dark);
@@ -399,6 +410,7 @@
     }
     .metric-text p { font-size: 13px; color: var(--cream-lo); }
 
+    /* Axya badge */
     .axya-block {
       margin-top: 32px; padding: 20px 24px;
       background: var(--dark-2);
@@ -406,6 +418,7 @@
       border-radius: 2px;
       display: flex; align-items: center; gap: 16px;
     }
+    /* AXYA LOGO: Replace this SVG with <img src="axya-logo.png" style="height:32px"> */
     .axya-logo {
       display: flex; align-items: center; gap: 8px;
       flex-shrink: 0;
@@ -421,6 +434,7 @@
       border-left: 1px solid var(--border-dark); padding-left: 16px;
     }
 
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━ RISK STRIP ━━━━━━━━━━━━━━━━━━━━━━━━ */
     .risk-section {
       background: var(--dark-1);
       border-top: 1px solid var(--border-dark);
@@ -459,6 +473,7 @@
     }
     .risk-item-text span { font-size: 14px; color: var(--cream-lo); }
 
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━ FINAL CTA ━━━━━━━━━━━━━━━━━━━━━━━━ */
     .cta-section {
       background: var(--dark-1);
       padding: 120px 52px;
@@ -489,6 +504,7 @@
     }
     .cta-trust span { color: var(--copper); font-weight: 600; }
 
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━ FOOTER ━━━━━━━━━━━━━━━━━━━━━━━━ */
     footer {
       background: var(--black);
       border-top: 1px solid var(--border-dark);
@@ -501,9 +517,14 @@
     .footer-right a { color: var(--copper); text-decoration: none; }
     .footer-right a:hover { color: var(--copper-hi); }
 
-    .logo-nav { height: 56px; width: auto; display: block; }
-    .logo-footer { height: 40px; width: auto; display: block; }
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━ LOGO SVG ━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* LOGO: Replace these SVG elements with:
+       <img src="startupx-logo.png" style="height:42px; width:auto" alt="StartupX" />
+       For footer: <img src="startupx-logo-sm.png" style="height:32px; width:auto" alt="StartupX" /> */
+    .logo-nav { height: 42px; width: auto; display: block; }
+    .logo-footer { height: 30px; width: auto; display: block; }
 
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━ FADE ANIMATIONS ━━━━━━━━━━━━━━━━━━━━━━━━ */
     .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
     .fade-up.delay-1 { transition-delay: 0.08s; }
@@ -511,6 +532,7 @@
     .fade-up.delay-3 { transition-delay: 0.24s; }
     .fade-up.delay-4 { transition-delay: 0.32s; }
 
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━ RESPONSIVE ━━━━━━━━━━━━━━━━━━━━━━━━ */
     @media (max-width: 900px) {
       nav { padding: 0 24px; }
       .nav-right .nav-link { display: none; }
@@ -539,9 +561,17 @@
 </head>
 <body>
 
+<!-- ═══════════════════════════ NAV ═══════════════════════════ -->
 <nav>
+  <!-- LOGO: swap SVG below with <img src="startupx-logo.png" style="height:42px"> -->
   <a href="#" aria-label="StartupX">
-    <img src="startupx-logo.png" class="logo-nav" alt="StartupX" />
+    <svg class="logo-nav" viewBox="0 0 140 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <text x="6" y="13" fill="#CBC6BB" font-family="Montserrat,sans-serif" font-weight="700" font-size="10" letter-spacing="4">STARTUP</text>
+      <polygon points="6,20 34,38 6,54 6,20" fill="#CBC6BB"/>
+      <polygon points="62,20 34,38 62,54 62,20" fill="#CBC6BB"/>
+      <circle cx="70" cy="51" r="5" fill="#B87333"/>
+      <text x="78" y="54" fill="#9A958D" font-family="Montserrat,sans-serif" font-weight="600" font-size="11" letter-spacing="1">RECRUITING</text>
+    </svg>
   </a>
   <div class="nav-right">
     <a href="#how" class="nav-link">How It Works</a>
@@ -551,12 +581,13 @@
   </div>
 </nav>
 
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
 <section class="hero" id="top">
   <div class="hero-inner">
     <div class="hero-eyebrow">Founder-First Recruiting</div>
-    <h1>Every week you wait<br>is a week your<br><em>competition</em> doesn't.</h1>
+    <h1>Your next hire is a<br><em>10×</em> decision.</h1>
     <p class="hero-sub">
-      The wrong hire or no hire, stalling will cost more than our fee. StartupX delivers a shortlist of startup-ready candidates in 7–10 days. No retainer. No risk. Just results.
+      StartupX finds 2–3 startup-ready candidates for Seed–Series A founders in Toronto, Montreal, and Vancouver — faster than any agency, without the bloat.
     </p>
     <div class="hero-ctas">
       <a href="https://calendly.com/startupx-recruiting/30min" target="_blank" rel="noopener" class="btn btn-copper">Book a Free 15-Minute Call</a>
@@ -568,7 +599,7 @@
         <div class="proof-label">Curated candidates</div>
       </div>
       <div class="proof-cell">
-        <div class="proof-num">7–10<span> days</span></div>
+        <div class="proof-num">10<span> days</span></div>
         <div class="proof-label">To a shortlist</div>
       </div>
       <div class="proof-cell">
@@ -579,13 +610,14 @@
   </div>
 </section>
 
+<!-- ═══════════════════════════ PROBLEM ═══════════════════════════ -->
 <section class="problem-section" id="problem">
   <div class="section-inner">
     <div class="section-label fade-up">The real cost of a bad hire</div>
     <p class="problem-lead fade-up">
       Early-stage recruiting is broken for founders.<br>
       <em>Agencies optimize for placement fees.</em> Job boards return noise.<br>
-      Your time and the wrong hire costs more than any retainer.
+      Your time — and the wrong hire — costs more than any retainer.
     </p>
     <div class="pain-grid">
       <div class="pain-card fade-up">
@@ -624,6 +656,7 @@
   </div>
 </section>
 
+<!-- ═══════════════════════════ HOW IT WORKS ═══════════════════════════ -->
 <section class="how-section" id="how">
   <div class="section-inner">
     <div class="section-label fade-up">The process</div>
@@ -632,7 +665,7 @@
       <div class="step-card fade-up">
         <span class="step-num">01</span>
         <div class="step-label">Week 1</div>
-        <h3>We learn the role and your company</h3>
+        <h3>We learn the role — and your company</h3>
         <p>A focused brief call. We want to understand your stage, the gap in your team, and what "startup-ready" actually means for this hire. No intake form. No account manager handoffs.</p>
         <div class="step-detail">→ 15-minute call → Written brief → Role confirmed</div>
       </div>
@@ -654,6 +687,7 @@
   </div>
 </section>
 
+<!-- ═══════════════════════════ WHO IT'S FOR ═══════════════════════════ -->
 <section class="for-section" id="for">
   <div class="section-inner">
     <div class="section-label fade-up">Who we work with</div>
@@ -662,7 +696,7 @@
       <div class="icp-card">
         <div class="icp-tag">Post-Product</div>
         <h3>Seed to Series A founders</h3>
-        <p>You've found product-market fit and you're scaling the team. Your next hire is a force multiplier or a 6-month setback. You need speed and quality, not one or the other.</p>
+        <p>You've found product-market fit and you're scaling the team. Your next hire is a force multiplier — or a 6-month setback. You need speed <em>and</em> quality, not one or the other.</p>
       </div>
       <div class="icp-card">
         <div class="icp-tag">No time to recruit</div>
@@ -672,12 +706,12 @@
       <div class="icp-card">
         <div class="icp-tag">Toronto · Montreal · Vancouver</div>
         <h3>Canadian tech startups</h3>
-        <p>We know the Canadian talent market. Where the best operators are, what they're making, and what will make them move. Local knowledge matters at the offer stage.</p>
+        <p>We know the Canadian talent market — where the best operators are, what they're making, and what will make them move. Local knowledge matters at the offer stage.</p>
       </div>
       <div class="icp-card">
         <div class="icp-tag">Revenue-generating roles</div>
         <h3>GTM, CS, Sales, Ops, BizDev</h3>
-        <p>We focus on the roles that directly affect revenue: customer success, sales development, account executives, operations, and business development. Startup-specific, not generic.</p>
+        <p>We focus on the roles that directly affect revenue: customer success, sales development, account executives, operations, and business development — startup-specific, not generic.</p>
       </div>
     </div>
 
@@ -695,11 +729,12 @@
     </div>
 
     <div class="qualifier fade-up">
-      <p><strong>StartupX isn't for everyone.</strong> We work best with founders who have a clear sense of the role and are ready to move fast when the right person shows up. If you're still exploring whether to hire, a conversation with us can help clarify that. The best results happen when both sides are committed.</p>
+      <p><strong>StartupX isn't for everyone.</strong> We work best with founders who have a clear sense of the role and are ready to move fast when the right person shows up. If you're still exploring whether to hire, a conversation with us can help clarify that — but the best results happen when both sides are committed.</p>
     </div>
   </div>
 </section>
 
+<!-- ═══════════════════════════ PROOF ═══════════════════════════ -->
 <section class="proof-section" id="proof">
   <div class="section-inner">
     <div class="proof-inner">
@@ -707,15 +742,26 @@
         <div class="section-label">Client result</div>
         <h2>Real results for<br>real founders.</h2>
         <blockquote class="proof-quote">
-          A Montreal B2B startup had been trying to fill an operations role for 4 months. We delivered a shortlist in 10 days, found the right candidate, and closed the hire against a competing offer $20K–25K higher.
+          "StartupX understood what we needed before we'd even finished the brief. They came back with candidates who had done this job before — at companies at our exact stage. One of those hires is still with us."
         </blockquote>
         <div class="proof-attribution">
-      Operations Hire · <span>Axya</span> · Seed-stage B2B · Montreal · Role closed in 10 days
+          Operations Hire — <span>Axya</span> · Seed-stage B2B · Montreal
         </div>
 
+        <!-- AXYA LOGO: Replace SVG below with <img src="axya-logo.png" style="height:32px"> -->
         <div class="axya-block">
           <div class="axya-logo">
-            <img src="axya-logo.png" style="height:32px; width:auto;" alt="Axya" />
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="2" width="18" height="24" rx="2.5" fill="#E3EDF8" stroke="#2E5C9A" stroke-width="1.5"/>
+              <path d="M15 2H21V9L15 2Z" fill="#5B9BD5" opacity="0.85"/>
+              <line x1="15" y1="2" x2="21" y2="9" stroke="#2E5C9A" stroke-width="1.4"/>
+              <rect x="6" y="13" width="10" height="1.5" rx="0.75" fill="#2E5C9A" opacity="0.4"/>
+              <rect x="6" y="16.5" width="8" height="1.5" rx="0.75" fill="#2E5C9A" opacity="0.4"/>
+              <rect x="6" y="20" width="6" height="1.5" rx="0.75" fill="#2E5C9A" opacity="0.4"/>
+              <circle cx="24" cy="24" r="7" fill="#2E5C9A"/>
+              <text x="24" y="27.5" text-anchor="middle" fill="#fff" font-family="Montserrat,sans-serif" font-size="8" font-weight="800">A</text>
+            </svg>
+            <span class="axya-name">Axya</span>
           </div>
           <div class="axya-desc">
             B2B procurement platform · Seed · Montreal
@@ -725,7 +771,7 @@
 
       <div class="proof-right fade-up delay-2">
         <div class="proof-metric">
-          <div class="metric-num">7–10</div>
+          <div class="metric-num">10</div>
           <div class="metric-text">
             <h4>Days to a shortlist</h4>
             <p>From brief call to 2–3 qualified candidates in your inbox</p>
@@ -757,11 +803,12 @@
   </div>
 </section>
 
+<!-- ═══════════════════════════ RISK STRIP ═══════════════════════════ -->
 <section class="risk-section" id="risk">
   <div class="risk-inner">
     <div class="risk-left fade-up">
       <h2>Why this isn't<br>a big commitment.</h2>
-      <p>        A 15-minute call costs you nothing. If there's no fit, we say so. If there is, we move fast and you don't pay until the hire is made.</p>
+      <p>A 15-minute call costs you nothing. If there's no fit, we say so. If there is, we move fast — and you don't pay until the hire is made.</p>
     </div>
     <div class="risk-items">
       <div class="risk-item fade-up">
@@ -796,6 +843,7 @@
   </div>
 </section>
 
+<!-- ═══════════════════════════ FINAL CTA ═══════════════════════════ -->
 <section class="cta-section" id="book">
   <div class="cta-inner">
     <div class="section-label fade-up">Ready to move?</div>
@@ -811,10 +859,17 @@
   </div>
 </section>
 
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
 <footer>
   <div class="footer-left">
+    <!-- LOGO: swap SVG with <img src="startupx-logo.png" style="height:30px"> -->
     <a href="#top" aria-label="StartupX">
-      <img src="startupx-logo.png" class="logo-footer" alt="StartupX" />
+      <svg class="logo-footer" viewBox="0 0 120 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <text x="5" y="11" fill="#9A958D" font-family="Montserrat,sans-serif" font-weight="700" font-size="8.5" letter-spacing="3.5">STARTUP</text>
+        <polygon points="5,17 28,31 5,44 5,17" fill="#9A958D"/>
+        <polygon points="50,17 28,31 50,44 50,17" fill="#9A958D"/>
+        <circle cx="57" cy="41.5" r="4" fill="#B87333"/>
+      </svg>
     </a>
     <span style="font-size:13px; color:var(--cream-lo);">Founder-first recruiting for Canadian startups</span>
   </div>
@@ -825,6 +880,7 @@
 </footer>
 
 <script>
+  // Scroll-based fade-in
   const observer = new IntersectionObserver(
     entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }),
     { threshold: 0.12 }
