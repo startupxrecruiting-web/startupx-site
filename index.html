@@ -1,0 +1,851 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;StartupX — Founder-First Recruiting&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="StartupX places startup-ready operators for Seed–Series A founders in Toronto, Montreal, and Vancouver. 2–3 curated candidates in days. No cost until you hire." /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>:root {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--black:<span class="Apple-converted-space">      </span>#080808;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--dark-1: <span class="Apple-converted-space">    </span>#0E0E0E;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--dark-2: <span class="Apple-converted-space">    </span>#141414;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--dark-3: <span class="Apple-converted-space">    </span>#1C1C1C;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--dark-4: <span class="Apple-converted-space">    </span>#262626;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--cream:<span class="Apple-converted-space">      </span>#CBC6BB;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--cream-hi: <span class="Apple-converted-space">  </span>#E4DDD3;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--cream-lo: <span class="Apple-converted-space">  </span>#8E8880;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--cream-dim:<span class="Apple-converted-space">  </span>rgba(203,198,187,0.07);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--cream-border: rgba(203,198,187,0.12);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--copper: <span class="Apple-converted-space">    </span>#B87333;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--copper-hi:<span class="Apple-converted-space">  </span>#D08B45;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--copper-lo:<span class="Apple-converted-space">  </span>#8C5520;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--copper-dim: rgba(184,115,51,0.12);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--copper-border: rgba(184,115,51,0.30);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--warm-bg:<span class="Apple-converted-space">    </span>#F0EDE6;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--off-white:<span class="Apple-converted-space">  </span>#F5F3EE;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--border-dark: #1F1F1F;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>html { scroll-behavior: smooth; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Inter', -apple-system, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--black);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--cream-hi);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>-webkit-font-smoothing: antialiased;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.65;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 17px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>nav {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: fixed; top: 0; left: 0; right: 0; z-index: 100;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0 52px; height: 76px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(8,8,8,0.96);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid rgba(255,255,255,0.045);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav-right { display: flex; align-items: center; gap: 36px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav-link {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 14px; font-weight: 500; color: var(--cream-lo);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none; transition: color 0.2s; letter-spacing: 0.03em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav-link:hover { color: var(--cream); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: inline-flex; align-items: center; gap: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 2px; transition: all 0.22s; cursor: pointer; border: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>white-space: nowrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-copper {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--copper); color: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 14px 28px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-copper:hover { background: var(--copper-hi); transform: translateY(-1px); box-shadow: 0 8px 28px rgba(184,115,51,0.35); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-outline {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: transparent; color: var(--cream);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 13px 27px; border: 1px solid var(--cream-border);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-outline:hover { border-color: var(--cream); color: var(--cream-hi); background: var(--cream-dim); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-ghost {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: transparent; color: var(--cream-lo);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 11px 22px; border: 1px solid rgba(203,198,187,0.18);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 13px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-ghost:hover { color: var(--cream); border-color: var(--cream-lo); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-nav {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: transparent; color: var(--cream);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px 22px; border: 1px solid rgba(203,198,187,0.22);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 12px; letter-spacing: 0.08em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-nav:hover { background: var(--cream-dim); border-color: var(--cream-lo); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--black);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 120px 52px 80px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: relative; overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero::before {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>content: '';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: absolute; inset: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: radial-gradient(ellipse 70% 60% at 60% 30%, rgba(184,115,51,0.07) 0%, transparent 65%),</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>radial-gradient(ellipse 50% 50% at 20% 70%, rgba(203,198,187,0.04) 0%, transparent 60%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>pointer-events: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero::after {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>content: '';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: absolute; inset: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-image: linear-gradient(rgba(203,198,187,0.025) 1px, transparent 1px),</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>linear-gradient(90deg, rgba(203,198,187,0.025) 1px, transparent 1px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-size: 60px 60px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>pointer-events: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-inner {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 1180px; margin: 0 auto; width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: relative; z-index: 1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-eyebrow {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: inline-flex; align-items: center; gap: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.16em; text-transform: uppercase; color: var(--copper);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 28px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-eyebrow::before {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>content: ''; width: 28px; height: 1.5px; background: var(--copper);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: clamp(48px, 7vw, 88px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 900; line-height: 1.0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: -0.03em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--cream-hi);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 28px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 800px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1 em {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-style: italic; color: var(--copper);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-sub {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: clamp(18px, 2vw, 22px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--cream-lo);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 540px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.65;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 44px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 400;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-ctas {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; gap: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap; margin-bottom: 64px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-proof-strip {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; gap: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--cream-border);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 2px; overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: fit-content;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.proof-cell {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 18px 32px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-right: 1px solid var(--cream-border);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.proof-cell:last-child { border-right: none; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.proof-num {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 28px; font-weight: 800;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--cream-hi); line-height: 1;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.proof-num span { color: var(--copper); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.proof-label {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 11px; font-weight: 500; letter-spacing: 0.1em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase; color: var(--cream-lo);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>section { padding: 100px 52px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.section-inner { max-width: 1180px; margin: 0 auto; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.section-label {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 10.5px; font-weight: 700; letter-spacing: 0.18em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase; color: var(--copper);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; gap: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.section-label::after { content: ''; flex: 1; max-width: 40px; height: 1px; background: var(--copper-border); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>h2 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: clamp(34px, 4.5vw, 58px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 800; line-height: 1.1;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: -0.025em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h3 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: clamp(20px, 2.2vw, 26px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700; line-height: 1.25;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.problem-section {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-top: 1px solid var(--border-dark);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid var(--border-dark);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.problem-lead {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: clamp(24px, 3vw, 38px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700; line-height: 1.25;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--cream-hi);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 760px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 60px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.problem-lead strong { color: var(--cream-hi); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.problem-lead em { color: var(--copper); font-style: normal; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.pain-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--border-dark);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border-dark);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 64px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.pain-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-2);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 36px 36px 32px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: background 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.pain-card:hover { background: var(--dark-3); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.pain-icon {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 36px; height: 36px; border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--copper-dim); border: 1px solid var(--copper-border);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.pain-icon svg { width: 16px; height: 16px; stroke: var(--copper); fill: none; stroke-width: 2; stroke-linecap: round; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.pain-card h3 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 17px; font-weight: 700; color: var(--cream-hi);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 10px; letter-spacing: -0.01em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.pain-card p { font-size: 15px; color: var(--cream-lo); line-height: 1.6; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.mid-cta-band {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--copper-dim);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--copper-border);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 28px 36px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; justify-content: space-between; gap: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.mid-cta-band p {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 17px; font-weight: 500; color: var(--cream-hi);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.mid-cta-band p span { color: var(--copper); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.how-section {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--warm-bg);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.how-section .section-label { color: #8C5520; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.how-section .section-label::after { background: rgba(140,85,32,0.3); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.how-section h2 { color: #1a1510; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.how-steps {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 52px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.step-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 44px 36px 40px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(0,0,0,0.07);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.step-num {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 96px; font-weight: 900; line-height: 1;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: rgba(0,0,0,0.04);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: absolute; top: 20px; right: 28px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: -0.04em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>pointer-events: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.step-label {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 10px; font-weight: 700; letter-spacing: 0.18em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase; color: var(--copper);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.step-card h3 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 20px; font-weight: 700; color: #1a1510;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 14px; line-height: 1.25;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: -0.015em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.step-card p { font-size: 15px; color: #5a5248; line-height: 1.65; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.step-detail {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 20px; padding-top: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-top: 1px solid rgba(0,0,0,0.07);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 13px; color: #8C5520; font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.02em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.for-section {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-2);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-top: 1px solid var(--border-dark);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.for-section h2 { color: var(--cream-hi); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.icp-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--border-dark);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border-dark);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 48px 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.icp-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 36px 36px 32px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.icp-tag {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 10px; font-weight: 700; letter-spacing: 0.14em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--copper-dim); color: var(--copper);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--copper-border);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 4px 10px; border-radius: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.icp-card h3 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 18px; font-weight: 700; color: var(--cream-hi);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.icp-card p { font-size: 15px; color: var(--cream-lo); line-height: 1.6; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.roles-strip {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; flex-wrap: wrap; gap: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 44px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.role-tag {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 12px; font-weight: 600; letter-spacing: 0.05em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--cream-lo);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--cream-border);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 7px 14px; border-radius: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: all 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.role-tag:hover { color: var(--cream); border-color: var(--cream-lo); background: var(--cream-dim); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.qualifier {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-4);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border-dark);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-left: 3px solid var(--copper);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 24px 28px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 0 2px 2px 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.qualifier p {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 15px; color: var(--cream-lo); line-height: 1.65;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.qualifier p strong { color: var(--cream); font-weight: 600; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.proof-section {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--black);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-top: 1px solid var(--border-dark);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.proof-inner {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: 1fr 1fr; gap: 80px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.proof-left .section-label { color: var(--copper); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.proof-left h2 { color: var(--cream-hi); margin-bottom: 24px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.proof-quote {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 19px; line-height: 1.65;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--cream-lo);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-style: italic;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-left: 2px solid var(--copper);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding-left: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 28px 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.proof-attribution {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 13px; font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--cream-lo); letter-spacing: 0.04em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.proof-attribution span { color: var(--copper); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.proof-right {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; flex-direction: column; gap: 1px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.proof-metric {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-2);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 28px 32px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border-dark);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; gap: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.metric-num {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 42px; font-weight: 900; line-height: 1;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--copper); letter-spacing: -0.03em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>white-space: nowrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.metric-text h4 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 15px; font-weight: 700; color: var(--cream-hi);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.metric-text p { font-size: 13px; color: var(--cream-lo); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.axya-block {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 32px; padding: 20px 24px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-2);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border-dark);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; gap: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.axya-logo {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; gap: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-shrink: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.axya-logo svg { width: 32px; height: 32px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.axya-name {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 17px; font-weight: 800;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #2E5C9A; letter-spacing: -0.01em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.axya-desc {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 13px; color: var(--cream-lo); line-height: 1.5;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-left: 1px solid var(--border-dark); padding-left: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.risk-section {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-top: 1px solid var(--border-dark);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid var(--border-dark);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 80px 52px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.risk-inner {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 1180px; margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: 1fr 1.6fr; gap: 80px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: start;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.risk-left h2 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: clamp(28px, 3.5vw, 44px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--cream-hi); margin-bottom: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.risk-left p { font-size: 16px; color: var(--cream-lo); line-height: 1.65; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.risk-items { display: flex; flex-direction: column; gap: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.risk-item {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 22px 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid var(--border-dark);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: flex-start; gap: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.risk-item:first-child { border-top: 1px solid var(--border-dark); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.risk-check {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 22px; height: 22px; border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--copper-dim); border: 1px solid var(--copper-border);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-shrink: 0; margin-top: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.risk-check svg { width: 10px; height: 10px; stroke: var(--copper); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.risk-item-text { flex: 1; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.risk-item-text strong {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: block; font-size: 15px; font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--cream-hi); margin-bottom: 3px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.risk-item-text span { font-size: 14px; color: var(--cream-lo); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cta-section {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 120px 52px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: relative; overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cta-section::before {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>content: '';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: absolute; inset: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: radial-gradient(ellipse 60% 70% at 50% 40%, rgba(184,115,51,0.09) 0%, transparent 65%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>pointer-events: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cta-inner { max-width: 680px; margin: 0 auto; position: relative; z-index: 1; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cta-section .section-label { justify-content: center; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cta-section .section-label::after { display: none; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cta-section h2 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--cream-hi); margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cta-section .cta-sub {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 19px; color: var(--cream-lo); margin-bottom: 44px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.65;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cta-section .cta-sub strong { color: var(--cream); font-weight: 500; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cta-btns { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cta-trust {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 28px; font-size: 13px; color: var(--cream-lo);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.02em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cta-trust span { color: var(--copper); font-weight: 600; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>footer {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--black);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-top: 1px solid var(--border-dark);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 44px 52px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap; gap: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.footer-left { display: flex; align-items: center; gap: 32px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.footer-right { font-size: 13px; color: var(--cream-lo); text-align: right; line-height: 1.6; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.footer-right a { color: var(--copper); text-decoration: none; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.footer-right a:hover { color: var(--copper-hi); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.logo-nav { height: 42px; width: auto; display: block; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.logo-footer { height: 30px; width: auto; display: block; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.fade-up.visible { opacity: 1; transform: translateY(0); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.fade-up.delay-1 { transition-delay: 0.08s; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.fade-up.delay-2 { transition-delay: 0.16s; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.fade-up.delay-3 { transition-delay: 0.24s; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.fade-up.delay-4 { transition-delay: 0.32s; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 900px) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>nav { padding: 0 24px; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.nav-right .nav-link { display: none; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>section { padding: 72px 24px; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.hero { padding: 100px 24px 64px; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.how-steps { grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.pain-grid { grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.icp-grid { grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.proof-inner { grid-template-columns: 1fr; gap: 48px; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.risk-inner { grid-template-columns: 1fr; gap: 36px; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.risk-section { padding: 72px 24px; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.cta-section { padding: 80px 24px; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.footer-right { text-align: left; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.hero-proof-strip { flex-direction: column; width: 100%; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.proof-cell { border-right: none; border-bottom: 1px solid var(--cream-border); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.proof-cell:last-child { border-bottom: none; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 520px) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>h1 { font-size: 40px; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>h2 { font-size: 30px; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.hero-ctas { flex-direction: column; align-items: flex-start; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.cta-btns { flex-direction: column; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="#" aria-label="StartupX"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;img src="startupx-logo.png" class="logo-nav" alt="StartupX" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="nav-right"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#how" class="nav-link"&gt;How It Works&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#proof" class="nav-link"&gt;Proof&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#book" class="nav-link"&gt;Contact&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="https://calendly.com/startupx-recruiting/30min" target="_blank" rel="noopener" class="btn btn-nav"&gt;Book 15 Min&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="hero" id="top"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="hero-inner"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hero-eyebrow"&gt;Founder-First Recruiting&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Every week you wait&lt;br&gt;is a week your&lt;br&gt;&lt;em&gt;competition&lt;/em&gt; doesn't.&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="hero-sub"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>The wrong hire — or no hire — costs more than our fee. StartupX delivers a shortlist of startup-ready candidates in 7–10 days. No retainer. No risk. Just results.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hero-ctas"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://calendly.com/startupx-recruiting/30min" target="_blank" rel="noopener" class="btn btn-copper"&gt;Book a Free 15-Minute Call&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#how" class="btn btn-outline"&gt;See How It Works&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hero-proof-strip fade-up"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="proof-cell"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="proof-num"&gt;2–3&lt;span&gt;&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="proof-label"&gt;Curated candidates&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="proof-cell"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="proof-num"&gt;7–10&lt;span&gt; days&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="proof-label"&gt;To a shortlist&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="proof-cell"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="proof-num"&gt;$&lt;span&gt;0&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="proof-label"&gt;Until you hire&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="problem-section" id="problem"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="section-inner"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label fade-up"&gt;The real cost of a bad hire&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="problem-lead fade-up"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Early-stage recruiting is broken for founders.&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;em&gt;Agencies optimize for placement fees.&lt;/em&gt; Job boards return noise.&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Your time — and the wrong hire — costs more than any retainer.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="pain-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="pain-card fade-up"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="pain-icon"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;svg viewBox="0 0 24 24"&gt;&lt;circle cx="12" cy="12" r="10"/&gt;&lt;line x1="12" y1="8" x2="12" y2="12"/&gt;&lt;line x1="12" y1="16" x2="12.01" y2="16"/&gt;&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Months of interviews, zero hires&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Generic job boards flood your inbox with unqualified applicants. You spend 6 weeks screening people who've never worked in a company under 200 people.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="pain-card fade-up delay-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="pain-icon"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;svg viewBox="0 0 24 24"&gt;&lt;path d="M12 2L2 7l10 5 10-5-10-5z"/&gt;&lt;path d="M2 17l10 5 10-5"/&gt;&lt;path d="M2 12l10 5 10-5"/&gt;&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Traditional agencies move too slow&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Retainer-based firms are built for enterprise timelines. By the time they deliver a shortlist, your best candidates have accepted other offers.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="pain-card fade-up delay-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="pain-icon"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;svg viewBox="0 0 24 24"&gt;&lt;line x1="12" y1="1" x2="12" y2="23"/&gt;&lt;path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/&gt;&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Placement fees eat your runway&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;20–25% of first-year salary, upfront. Before you even know if the hire works out. That's $20K–30K on a single CS hire before they've sent one email.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="pain-card fade-up delay-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="pain-icon"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;svg viewBox="0 0 24 24"&gt;&lt;path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/&gt;&lt;circle cx="9" cy="7" r="4"/&gt;&lt;path d="M23 21v-2a4 4 0 0 0-3-3.87"/&gt;&lt;path d="M16 3.13a4 4 0 0 1 0 7.75"/&gt;&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Candidates who can't handle early-stage&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Someone with a great enterprise résumé and zero tolerance for ambiguity. Six months in, you're both miserable. That's not a recruiting problem — it was a fit problem from day one.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="mid-cta-band fade-up"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;StartupX was built to solve exactly this. &lt;span&gt;15 minutes to find out if we're the right fit.&lt;/span&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://calendly.com/startupx-recruiting/30min" target="_blank" rel="noopener" class="btn btn-copper"&gt;Book a Free 15-Minute Call&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="how-section" id="how"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="section-inner"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label fade-up"&gt;The process&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="fade-up" style="color:#1a1510;"&gt;Built for founder speed,&lt;br&gt;not agency timelines.&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="how-steps"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="step-card fade-up"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="step-num"&gt;01&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="step-label"&gt;Week 1&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;We learn the role — and your company&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;A focused brief call. We want to understand your stage, the gap in your team, and what "startup-ready" actually means for this hire. No intake form. No account manager handoffs.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="step-detail"&gt;→ 15-minute call → Written brief → Role confirmed&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="step-card fade-up delay-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="step-num"&gt;02&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="step-label"&gt;Week 1–2&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Active sourcing, not passive posting&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;We go find your candidates. Direct outreach to operators who've done the job before, often at companies just like yours. We filter on fit, not just keywords.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="step-detail"&gt;→ 2–3 curated candidates → In 10 days or less&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="step-card fade-up delay-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="step-num"&gt;03&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="step-label"&gt;Ongoing&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;You hire. We close the loop.&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;We stay in the process — coordinating interviews, managing communication, handling offers. You focus on the decision, not the logistics. No cost until you make the hire.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="step-detail"&gt;→ $0 unless you hire → No surprise fees&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="for-section" id="for"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="section-inner"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label fade-up"&gt;Who we work with&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="fade-up"&gt;Made for founders who&lt;br&gt;move fast and hire smart.&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="icp-grid fade-up"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="icp-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="icp-tag"&gt;Post-Product&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Seed to Series A founders&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;You've found product-market fit and you're scaling the team. Your next hire is a force multiplier — or a 6-month setback. You need speed &lt;em&gt;and&lt;/em&gt; quality, not one or the other.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="icp-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="icp-tag"&gt;No time to recruit&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Operators who are already stretched&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;You're running the product, the customers, and the fundraise. You don't have 10 hours a week to review résumés. You need someone you trust to handle sourcing while you stay focused.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="icp-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="icp-tag"&gt;Toronto · Montreal · Vancouver&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Canadian tech startups&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;We know the Canadian talent market — where the best operators are, what they're making, and what will make them move. Local knowledge matters at the offer stage.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="icp-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="icp-tag"&gt;Revenue-generating roles&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;GTM, CS, Sales, Ops, BizDev&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;We focus on the roles that directly affect revenue: customer success, sales development, account executives, operations, and business development — startup-specific, not generic.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label fade-up" style="margin-bottom:16px;"&gt;Roles we fill&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="roles-strip fade-up"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="role-tag"&gt;Customer Success&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="role-tag"&gt;Account Executive&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="role-tag"&gt;Sales Development&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="role-tag"&gt;Revenue Operations&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="role-tag"&gt;Business Development&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="role-tag"&gt;Partnerships&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="role-tag"&gt;Customer Support Lead&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="role-tag"&gt;GTM Operations&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="role-tag"&gt;Account Management&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="qualifier fade-up"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;&lt;strong&gt;StartupX isn't for everyone.&lt;/strong&gt; We work best with founders who have a clear sense of the role and are ready to move fast when the right person shows up. If you're still exploring whether to hire, a conversation with us can help clarify that — but the best results happen when both sides are committed.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="proof-section" id="proof"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="section-inner"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="proof-inner"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="proof-left fade-up"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="section-label"&gt;Client result&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Real results for&lt;br&gt;real founders.&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;blockquote class="proof-quote"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>A Montreal B2B startup had been trying to fill an operations role for 4 months. We delivered a shortlist in 10 days, found the right candidate — and closed the hire against a competing offer $20K–25K higher.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/blockquote&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="proof-attribution"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Operations Hire — &lt;span&gt;Axya&lt;/span&gt; · Seed-stage B2B · Montreal · Role closed in 10 days</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="axya-block"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="axya-logo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src="axya-logo.png" style="height:32px; width:auto;" alt="Axya" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="axya-desc"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>B2B procurement platform · Seed · Montreal</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="proof-right fade-up delay-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="proof-metric"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="metric-num"&gt;7–10&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="metric-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h4&gt;Days to a shortlist&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;From brief call to 2–3 qualified candidates in your inbox&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="proof-metric"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="metric-num"&gt;$0&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="metric-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h4&gt;No upfront cost&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;You only pay when you make a hire — no retainers, no surprises&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="proof-metric"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="metric-num"&gt;2–3&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="metric-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h4&gt;Curated candidates, not a firehose&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Every profile is vetted and relevant — not a keyword match&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="proof-metric"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="metric-num"&gt;100%&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="metric-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h4&gt;Startup-specific candidates&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;We only send people who've operated in ambiguity before&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="risk-section" id="risk"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="risk-inner"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="risk-left fade-up"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Why this isn't&lt;br&gt;a big commitment.&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;A 15-minute call costs you nothing. If there's no fit, we say so. If there is, we move fast — and you don't pay until the hire is made.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="risk-items"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="risk-item fade-up"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="risk-check"&gt;&lt;svg viewBox="0 0 12 12"&gt;&lt;polyline points="2,6 5,9 10,3"/&gt;&lt;/svg&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="risk-item-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;strong&gt;No retainer, no upfront fee&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;You pay only when you make a successful hire. Zero risk to starting the conversation.&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="risk-item fade-up delay-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="risk-check"&gt;&lt;svg viewBox="0 0 12 12"&gt;&lt;polyline points="2,6 5,9 10,3"/&gt;&lt;/svg&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="risk-item-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;strong&gt;15-minute discovery, not a 2-hour intake&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;We get what we need quickly so we can start immediately — no lengthy onboarding process.&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="risk-item fade-up delay-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="risk-check"&gt;&lt;svg viewBox="0 0 12 12"&gt;&lt;polyline points="2,6 5,9 10,3"/&gt;&lt;/svg&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="risk-item-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;strong&gt;You stay in control&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;We make introductions. You make the call. No pressure, no hard closes, no commission-driven pushes.&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="risk-item fade-up delay-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="risk-check"&gt;&lt;svg viewBox="0 0 12 12"&gt;&lt;polyline points="2,6 5,9 10,3"/&gt;&lt;/svg&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="risk-item-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;strong&gt;If it's not a fit, we'll tell you&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;We'd rather turn down the engagement than waste your time on a search we can't win.&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="cta-section" id="book"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="cta-inner"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label fade-up"&gt;Ready to move?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="fade-up"&gt;15 minutes.&lt;br&gt;That's all it takes.&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="cta-sub fade-up"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Book a free 15-minute call. We'll tell you honestly whether we can help, what the timeline looks like, and what the cost is. &lt;strong&gt;No pitch. No pressure.&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="cta-btns fade-up"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://calendly.com/startupx-recruiting/30min" target="_blank" rel="noopener" class="btn btn-copper"&gt;Book a Free 15-Minute Call →&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="mailto:startupx.recruiting@gmail.com" class="btn btn-outline"&gt;Send us a note&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="cta-trust fade-up"&gt;&lt;span&gt;$0 upfront&lt;/span&gt; &amp;nbsp;·&amp;nbsp; Toronto, Montreal, Vancouver &amp;nbsp;·&amp;nbsp; Seed to Series A&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="footer-left"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#top" aria-label="StartupX"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;img src="startupx-logo.png" class="logo-footer" alt="StartupX" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span style="font-size:13px; color:var(--cream-lo);"&gt;Founder-first recruiting for Canadian startups&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="footer-right"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>Toronto · Montreal · Vancouver&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="mailto:startupx.recruiting@gmail.com"&gt;startupx.recruiting@gmail.com&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const observer = new IntersectionObserver(</p>
+<p class="p1"><span class="Apple-converted-space">    </span>entries =&gt; entries.forEach(e =&gt; { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ threshold: 0.12 }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll('.fade-up').forEach(el =&gt; observer.observe(el));</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
