@@ -43,7 +43,6 @@
       font-size: 17px;
     }
 
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━ NAV ━━━━━━━━━━━━━━━━━━━━━━━━ */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
@@ -60,7 +59,6 @@
     }
     .nav-link:hover { color: var(--cream); }
 
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━ BUTTONS ━━━━━━━━━━━━━━━━━━━━━━━━ */
     .btn {
       display: inline-flex; align-items: center; gap: 8px;
       font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700;
@@ -94,7 +92,6 @@
     }
     .btn-nav:hover { background: var(--cream-dim); border-color: var(--cream-lo); }
 
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━ HERO ━━━━━━━━━━━━━━━━━━━━━━━━ */
     .hero {
       min-height: 100vh;
       background: var(--black);
@@ -109,7 +106,6 @@
                   radial-gradient(ellipse 50% 50% at 20% 70%, rgba(203,198,187,0.04) 0%, transparent 60%);
       pointer-events: none;
     }
-    /* Subtle grid texture */
     .hero::after {
       content: '';
       position: absolute; inset: 0;
@@ -179,7 +175,6 @@
       text-transform: uppercase; color: var(--cream-lo);
     }
 
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━ SECTION BASE ━━━━━━━━━━━━━━━━━━━━━━━━ */
     section { padding: 100px 52px; }
     .section-inner { max-width: 1180px; margin: 0 auto; }
 
@@ -204,7 +199,6 @@
       font-weight: 700; line-height: 1.25;
     }
 
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━ PROBLEM ━━━━━━━━━━━━━━━━━━━━━━━━ */
     .problem-section {
       background: var(--dark-1);
       border-top: 1px solid var(--border-dark);
@@ -259,7 +253,6 @@
     }
     .mid-cta-band p span { color: var(--copper); }
 
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━ HOW IT WORKS ━━━━━━━━━━━━━━━━━━━━━━━━ */
     .how-section {
       background: var(--warm-bg);
     }
@@ -304,7 +297,6 @@
       letter-spacing: 0.02em;
     }
 
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━ WHO IT'S FOR ━━━━━━━━━━━━━━━━━━━━━━━━ */
     .for-section {
       background: var(--dark-2);
       border-top: 1px solid var(--border-dark);
@@ -362,7 +354,6 @@
     }
     .qualifier p strong { color: var(--cream); font-weight: 600; }
 
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━ PROOF ━━━━━━━━━━━━━━━━━━━━━━━━ */
     .proof-section {
       background: var(--black);
       border-top: 1px solid var(--border-dark);
@@ -376,7 +367,6 @@
     .proof-quote {
       font-size: 19px; line-height: 1.65;
       color: var(--cream-lo);
-      font-style: italic;
       border-left: 2px solid var(--copper);
       padding-left: 24px;
       margin: 28px 0;
@@ -409,7 +399,6 @@
     }
     .metric-text p { font-size: 13px; color: var(--cream-lo); }
 
-    /* Axya badge */
     .axya-block {
       margin-top: 32px; padding: 20px 24px;
       background: var(--dark-2);
@@ -417,7 +406,6 @@
       border-radius: 2px;
       display: flex; align-items: center; gap: 16px;
     }
-    /* AXYA LOGO: Replace this SVG with <img src="axya-logo.png" style="height:32px"> */
     .axya-logo {
       display: flex; align-items: center; gap: 8px;
       flex-shrink: 0;
@@ -433,7 +421,6 @@
       border-left: 1px solid var(--border-dark); padding-left: 16px;
     }
 
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━ RISK STRIP ━━━━━━━━━━━━━━━━━━━━━━━━ */
     .risk-section {
       background: var(--dark-1);
       border-top: 1px solid var(--border-dark);
@@ -472,7 +459,6 @@
     }
     .risk-item-text span { font-size: 14px; color: var(--cream-lo); }
 
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━ FINAL CTA ━━━━━━━━━━━━━━━━━━━━━━━━ */
     .cta-section {
       background: var(--dark-1);
       padding: 120px 52px;
@@ -503,7 +489,6 @@
     }
     .cta-trust span { color: var(--copper); font-weight: 600; }
 
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━ FOOTER ━━━━━━━━━━━━━━━━━━━━━━━━ */
     footer {
       background: var(--black);
       border-top: 1px solid var(--border-dark);
@@ -516,14 +501,9 @@
     .footer-right a { color: var(--copper); text-decoration: none; }
     .footer-right a:hover { color: var(--copper-hi); }
 
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━ LOGO SVG ━━━━━━━━━━━━━━━━━━━━━━━━ */
-    /* LOGO: Replace these SVG elements with:
-       <img src="startupx-logo.png" style="height:42px; width:auto" alt="StartupX" />
-       For footer: <img src="startupx-logo-sm.png" style="height:32px; width:auto" alt="StartupX" /> */
     .logo-nav { height: 42px; width: auto; display: block; }
     .logo-footer { height: 30px; width: auto; display: block; }
 
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━ FADE ANIMATIONS ━━━━━━━━━━━━━━━━━━━━━━━━ */
     .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
     .fade-up.delay-1 { transition-delay: 0.08s; }
@@ -531,7 +511,6 @@
     .fade-up.delay-3 { transition-delay: 0.24s; }
     .fade-up.delay-4 { transition-delay: 0.32s; }
 
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━ RESPONSIVE ━━━━━━━━━━━━━━━━━━━━━━━━ */
     @media (max-width: 900px) {
       nav { padding: 0 24px; }
       .nav-right .nav-link { display: none; }
@@ -560,7 +539,6 @@
 </head>
 <body>
 
-<!-- ═══════════════════════════ NAV ═══════════════════════════ -->
 <nav>
   <a href="#" aria-label="StartupX">
     <img src="startupx-logo.png" style="height:42px; width:auto; display:block;" alt="StartupX" />
@@ -573,7 +551,6 @@
   </div>
 </nav>
 
-<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
 <section class="hero" id="top">
   <div class="hero-inner">
     <div class="hero-eyebrow">Founder-First Recruiting</div>
@@ -602,7 +579,6 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════ PROBLEM ═══════════════════════════ -->
 <section class="problem-section" id="problem">
   <div class="section-inner">
     <div class="section-label fade-up">The real cost of a bad hire</div>
@@ -648,7 +624,6 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════ HOW IT WORKS ═══════════════════════════ -->
 <section class="how-section" id="how">
   <div class="section-inner">
     <div class="section-label fade-up">The process</div>
@@ -679,7 +654,6 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════ WHO IT'S FOR ═══════════════════════════ -->
 <section class="for-section" id="for">
   <div class="section-inner">
     <div class="section-label fade-up">Who we work with</div>
@@ -726,21 +700,20 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════ PROOF ═══════════════════════════ -->
 <section class="proof-section" id="proof">
   <div class="section-inner">
     <div class="proof-inner">
       <div class="proof-left fade-up">
-        <div class="section-label">Client result</div>
-        <h2>Real results for<br>real founders.</h2>
-        <blockquote class="proof-quote">
-          "StartupX understood what we needed before we'd even finished the brief. They came back with candidates who had done this job before — at companies at our exact stage. One of those hires is still with us."
-        </blockquote>
+        <div class="section-label">Case study</div>
+        <h2>A real search,<br>closed fast.</h2>
+        <div class="proof-quote">
+          Axya had been trying to fill a <strong>Customer Support Team Lead</strong> role for roughly <strong>4 months</strong>.
+          StartupX stepped in, ran the search, and helped close the hire after identifying a strong candidate who was also considering a competing offer at <strong>$100K</strong>, while the role had originally been scoped closer to <strong>$75K–80K</strong>.
+        </div>
         <div class="proof-attribution">
-          Operations Hire — <span>Axya</span> · Seed-stage B2B · Montreal
+          Customer Support Team Lead — <span>Axya</span> · Seed-stage B2B · Montreal
         </div>
 
-        <!-- AXYA LOGO: Replace SVG below with <img src="axya-logo.png" style="height:32px"> -->
         <div class="axya-block">
           <div class="axya-logo">
             <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -763,31 +736,31 @@
 
       <div class="proof-right fade-up delay-2">
         <div class="proof-metric">
+          <div class="metric-num">4</div>
+          <div class="metric-text">
+            <h4>Months the role was open</h4>
+            <p>Axya had been trying to close the search long before StartupX stepped in</p>
+          </div>
+        </div>
+        <div class="proof-metric">
           <div class="metric-num">10</div>
           <div class="metric-text">
             <h4>Days to a shortlist</h4>
-            <p>From brief call to 2–3 qualified candidates in your inbox</p>
+            <p>From brief call to a focused shortlist of qualified candidates</p>
           </div>
         </div>
         <div class="proof-metric">
-          <div class="metric-num">$0</div>
+          <div class="metric-num">$100K</div>
           <div class="metric-text">
-            <h4>No upfront cost</h4>
-            <p>You only pay when you make a hire — no retainers, no surprises</p>
+            <h4>Competing offer in play</h4>
+            <p>The candidate was weighing a higher external offer during the process</p>
           </div>
         </div>
         <div class="proof-metric">
-          <div class="metric-num">2–3</div>
+          <div class="metric-num">$75–80K</div>
           <div class="metric-text">
-            <h4>Curated candidates, not a firehose</h4>
-            <p>Every profile is vetted and relevant — not a keyword match</p>
-          </div>
-        </div>
-        <div class="proof-metric">
-          <div class="metric-num">100%</div>
-          <div class="metric-text">
-            <h4>Startup-specific candidates</h4>
-            <p>We only send people who've operated in ambiguity before</p>
+            <h4>Original role range</h4>
+            <p>The search required navigating fit, speed, and compensation reality</p>
           </div>
         </div>
       </div>
@@ -795,7 +768,6 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════ RISK STRIP ═══════════════════════════ -->
 <section class="risk-section" id="risk">
   <div class="risk-inner">
     <div class="risk-left fade-up">
@@ -835,7 +807,6 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════ FINAL CTA ═══════════════════════════ -->
 <section class="cta-section" id="book">
   <div class="cta-inner">
     <div class="section-label fade-up">Ready to move?</div>
@@ -851,7 +822,6 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
 <footer>
   <div class="footer-left">
     <a href="#top" aria-label="StartupX">
@@ -866,7 +836,6 @@
 </footer>
 
 <script>
-  // Scroll-based fade-in
   const observer = new IntersectionObserver(
     entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }),
     { threshold: 0.12 }
