@@ -3,34 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StartupX — Founder-First Recruiting</title>
-  <meta name="description" content="StartupX places startup-ready operators for Seed–Series A founders in Toronto, Montreal, and Vancouver. 2–3 curated candidates in days. No cost until you hire." />
-  <link rel="icon" href="startupx-logo.png" />
+  <title>StartupX | Founder-First Recruiting</title>
+  <meta name="description" content="StartupX places startup-ready operators for Seed to Series A founders in Toronto, Montreal, and Vancouver. 2–3 curated candidates in 10 days. Nothing to pay until you hire." />
+  <link rel="icon" href="startupx-logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --black:      #080808;
-      --dark-1:     #0E0E0E;
-      --dark-2:     #141414;
-      --dark-3:     #1C1C1C;
-      --dark-4:     #262626;
-      --cream:      #CBC6BB;
-      --cream-hi:   #E4DDD3;
-      --cream-lo:   #8E8880;
-      --cream-dim:  rgba(203,198,187,0.07);
+      --black:        #080808;
+      --dark-1:       #0E0E0E;
+      --dark-2:       #141414;
+      --dark-3:       #1C1C1C;
+      --dark-4:       #262626;
+      --cream:        #CBC6BB;
+      --cream-hi:     #E4DDD3;
+      --cream-lo:     #8E8880;
+      --cream-dim:    rgba(203,198,187,0.07);
       --cream-border: rgba(203,198,187,0.12);
-      --copper:     #B87333;
-      --copper-hi:  #D08B45;
-      --copper-lo:  #8C5520;
-      --copper-dim: rgba(184,115,51,0.12);
-      --copper-border: rgba(184,115,51,0.30);
-      --warm-bg:    #F0EDE6;
-      --off-white:  #F5F3EE;
-      --border-dark: #1F1F1F;
+      --copper:       #B87333;
+      --copper-hi:    #D08B45;
+      --copper-dim:   rgba(184,115,51,0.12);
+      --copper-border:rgba(184,115,51,0.28);
+      --warm-bg:      #F0EDE6;
+      --border-dark:  #1F1F1F;
     }
 
     html { scroll-behavior: smooth; }
@@ -43,6 +41,7 @@
       font-size: 17px;
     }
 
+    /* ━━━━ NAV ━━━━ */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
@@ -51,47 +50,48 @@
       backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
       border-bottom: 1px solid rgba(255,255,255,0.045);
     }
+    .nav-logo {
+      display: block;
+      height: 36px;
+      width: auto;
+    }
     .nav-right { display: flex; align-items: center; gap: 36px; }
     .nav-link {
-      font-size: 14px; font-weight: 500; color: var(--cream-lo);
-      text-decoration: none; transition: color 0.2s; letter-spacing: 0.03em;
-      text-transform: uppercase;
+      font-size: 13px; font-weight: 500; color: var(--cream-lo);
+      text-decoration: none; transition: color 0.2s;
+      letter-spacing: 0.06em; text-transform: uppercase;
     }
     .nav-link:hover { color: var(--cream); }
 
+    /* ━━━━ BUTTONS ━━━━ */
     .btn {
       display: inline-flex; align-items: center; gap: 8px;
-      font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700;
-      letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none;
-      border-radius: 2px; transition: all 0.22s; cursor: pointer; border: none;
+      font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700;
+      letter-spacing: 0.07em; text-transform: uppercase; text-decoration: none;
+      border-radius: 2px; transition: all 0.2s; cursor: pointer; border: none;
       white-space: nowrap;
     }
     .btn-copper {
       background: var(--copper); color: #fff;
       padding: 14px 28px;
     }
-    .btn-copper:hover { background: var(--copper-hi); transform: translateY(-1px); box-shadow: 0 8px 28px rgba(184,115,51,0.35); }
-
+    .btn-copper:hover {
+      background: var(--copper-hi); transform: translateY(-1px);
+      box-shadow: 0 8px 28px rgba(184,115,51,0.3);
+    }
     .btn-outline {
       background: transparent; color: var(--cream);
       padding: 13px 27px; border: 1px solid var(--cream-border);
     }
     .btn-outline:hover { border-color: var(--cream); color: var(--cream-hi); background: var(--cream-dim); }
-
-    .btn-ghost {
-      background: transparent; color: var(--cream-lo);
-      padding: 11px 22px; border: 1px solid rgba(203,198,187,0.18);
-      font-size: 13px;
-    }
-    .btn-ghost:hover { color: var(--cream); border-color: var(--cream-lo); }
-
     .btn-nav {
       background: transparent; color: var(--cream);
-      padding: 10px 22px; border: 1px solid rgba(203,198,187,0.22);
+      padding: 10px 20px; border: 1px solid rgba(203,198,187,0.22);
       font-size: 12px; letter-spacing: 0.08em;
     }
-    .btn-nav:hover { background: var(--cream-dim); border-color: var(--cream-lo); }
+    .btn-nav:hover { background: var(--cream-dim); }
 
+    /* ━━━━ HERO ━━━━ */
     .hero {
       min-height: 100vh;
       background: var(--black);
@@ -102,16 +102,18 @@
     .hero::before {
       content: '';
       position: absolute; inset: 0;
-      background: radial-gradient(ellipse 70% 60% at 60% 30%, rgba(184,115,51,0.07) 0%, transparent 65%),
-                  radial-gradient(ellipse 50% 50% at 20% 70%, rgba(203,198,187,0.04) 0%, transparent 60%);
+      background:
+        radial-gradient(ellipse 65% 55% at 62% 28%, rgba(184,115,51,0.07) 0%, transparent 65%),
+        radial-gradient(ellipse 45% 45% at 18% 72%, rgba(203,198,187,0.04) 0%, transparent 60%);
       pointer-events: none;
     }
     .hero::after {
       content: '';
       position: absolute; inset: 0;
-      background-image: linear-gradient(rgba(203,198,187,0.025) 1px, transparent 1px),
-                        linear-gradient(90deg, rgba(203,198,187,0.025) 1px, transparent 1px);
-      background-size: 60px 60px;
+      background-image:
+        linear-gradient(rgba(203,198,187,0.022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(203,198,187,0.022) 1px, transparent 1px);
+      background-size: 64px 64px;
       pointer-events: none;
     }
     .hero-inner {
@@ -121,84 +123,85 @@
     .hero-eyebrow {
       display: inline-flex; align-items: center; gap: 10px;
       font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700;
-      letter-spacing: 0.16em; text-transform: uppercase; color: var(--copper);
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--copper);
       margin-bottom: 28px;
     }
     .hero-eyebrow::before {
-      content: ''; width: 28px; height: 1.5px; background: var(--copper);
+      content: ''; width: 26px; height: 1.5px; background: var(--copper);
     }
     h1 {
       font-family: 'Montserrat', sans-serif;
-      font-size: clamp(48px, 7vw, 88px);
-      font-weight: 900; line-height: 1.0;
+      font-size: clamp(44px, 6.5vw, 82px);
+      font-weight: 900; line-height: 1.02;
       letter-spacing: -0.03em;
       color: var(--cream-hi);
       margin-bottom: 28px;
-      max-width: 800px;
+      max-width: 820px;
     }
-    h1 em {
-      font-style: italic; color: var(--copper);
-    }
+    h1 em { font-style: italic; color: var(--copper); }
     .hero-sub {
-      font-size: clamp(18px, 2vw, 22px);
+      font-size: clamp(17px, 1.8vw, 20px);
       color: var(--cream-lo);
-      max-width: 540px;
-      line-height: 1.65;
+      max-width: 520px;
+      line-height: 1.7;
       margin-bottom: 44px;
-      font-weight: 400;
     }
     .hero-ctas {
-      display: flex; align-items: center; gap: 16px;
-      flex-wrap: wrap; margin-bottom: 64px;
+      display: flex; align-items: center; gap: 14px;
+      flex-wrap: wrap; margin-bottom: 60px;
     }
     .hero-proof-strip {
-      display: flex; align-items: center; gap: 0;
+      display: flex; align-items: stretch;
       border: 1px solid var(--cream-border);
       border-radius: 2px; overflow: hidden;
       width: fit-content;
     }
     .proof-cell {
-      padding: 18px 32px;
+      padding: 16px 30px;
       border-right: 1px solid var(--cream-border);
       text-align: center;
     }
     .proof-cell:last-child { border-right: none; }
     .proof-num {
       font-family: 'Montserrat', sans-serif;
-      font-size: 28px; font-weight: 800;
-      color: var(--cream-hi); line-height: 1;
-      margin-bottom: 4px;
+      font-size: 26px; font-weight: 800;
+      color: var(--copper); line-height: 1;
+      margin-bottom: 5px;
     }
     .proof-num span { color: var(--copper); }
     .proof-label {
-      font-size: 11px; font-weight: 500; letter-spacing: 0.1em;
+      font-size: 10.5px; font-weight: 500; letter-spacing: 0.1em;
       text-transform: uppercase; color: var(--cream-lo);
     }
 
-    section { padding: 100px 52px; }
+    /* ━━━━ SECTION BASE ━━━━ */
+    section { padding: 96px 52px; }
     .section-inner { max-width: 1180px; margin: 0 auto; }
 
     .section-label {
       font-family: 'Montserrat', sans-serif;
-      font-size: 10.5px; font-weight: 700; letter-spacing: 0.18em;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
       text-transform: uppercase; color: var(--copper);
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       display: flex; align-items: center; gap: 10px;
     }
-    .section-label::after { content: ''; flex: 1; max-width: 40px; height: 1px; background: var(--copper-border); }
+    .section-label::after {
+      content: ''; width: 32px; height: 1px; background: var(--copper-border);
+    }
 
     h2 {
       font-family: 'Montserrat', sans-serif;
-      font-size: clamp(34px, 4.5vw, 58px);
+      font-size: clamp(32px, 4vw, 54px);
       font-weight: 800; line-height: 1.1;
       letter-spacing: -0.025em;
     }
     h3 {
       font-family: 'Montserrat', sans-serif;
-      font-size: clamp(20px, 2.2vw, 26px);
+      font-size: clamp(18px, 1.8vw, 22px);
       font-weight: 700; line-height: 1.25;
     }
 
+    /* ━━━━ PROBLEM ━━━━ */
     .problem-section {
       background: var(--dark-1);
       border-top: 1px solid var(--border-dark);
@@ -206,76 +209,73 @@
     }
     .problem-lead {
       font-family: 'Montserrat', sans-serif;
-      font-size: clamp(24px, 3vw, 38px);
-      font-weight: 700; line-height: 1.25;
+      font-size: clamp(22px, 2.6vw, 34px);
+      font-weight: 700; line-height: 1.3;
       color: var(--cream-hi);
-      max-width: 760px;
-      margin-bottom: 60px;
+      max-width: 720px;
+      margin-bottom: 56px;
     }
-    .problem-lead strong { color: var(--cream-hi); }
     .problem-lead em { color: var(--copper); font-style: normal; }
     .pain-grid {
       display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
       background: var(--border-dark);
       border: 1px solid var(--border-dark);
-      margin-bottom: 64px;
+      margin-bottom: 56px;
     }
     .pain-card {
       background: var(--dark-2);
-      padding: 36px 36px 32px;
-      transition: background 0.2s;
+      padding: 34px 34px 30px;
+      transition: background 0.18s;
     }
     .pain-card:hover { background: var(--dark-3); }
     .pain-icon {
-      width: 36px; height: 36px; border-radius: 50%;
+      width: 34px; height: 34px; border-radius: 50%;
       background: var(--copper-dim); border: 1px solid var(--copper-border);
       display: flex; align-items: center; justify-content: center;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
-    .pain-icon svg { width: 16px; height: 16px; stroke: var(--copper); fill: none; stroke-width: 2; stroke-linecap: round; }
+    .pain-icon svg { width: 15px; height: 15px; stroke: var(--copper); fill: none; stroke-width: 2; stroke-linecap: round; }
     .pain-card h3 {
-      font-size: 17px; font-weight: 700; color: var(--cream-hi);
+      font-size: 16px; font-weight: 700; color: var(--cream-hi);
       margin-bottom: 10px; letter-spacing: -0.01em;
     }
-    .pain-card p { font-size: 15px; color: var(--cream-lo); line-height: 1.6; }
+    .pain-card p { font-size: 14.5px; color: var(--cream-lo); line-height: 1.65; }
 
     .mid-cta-band {
       background: var(--copper-dim);
       border: 1px solid var(--copper-border);
       border-radius: 2px;
-      padding: 28px 36px;
+      padding: 26px 34px;
       display: flex; align-items: center; justify-content: space-between; gap: 24px;
       flex-wrap: wrap;
     }
     .mid-cta-band p {
-      font-size: 17px; font-weight: 500; color: var(--cream-hi);
+      font-size: 16px; font-weight: 600; color: var(--cream-hi);
       font-family: 'Montserrat', sans-serif;
     }
     .mid-cta-band p span { color: var(--copper); }
 
-    .how-section {
-      background: var(--warm-bg);
-    }
+    /* ━━━━ HOW IT WORKS ━━━━ */
+    .how-section { background: var(--warm-bg); }
     .how-section .section-label { color: #8C5520; }
     .how-section .section-label::after { background: rgba(140,85,32,0.3); }
-    .how-section h2 { color: #1a1510; }
     .how-steps {
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
-      margin-top: 52px;
+      margin-top: 48px;
     }
     .step-card {
       background: #fff;
-      padding: 44px 36px 40px;
+      padding: 40px 32px 36px;
       position: relative;
       border: 1px solid rgba(0,0,0,0.07);
     }
     .step-num {
       font-family: 'Montserrat', sans-serif;
-      font-size: 96px; font-weight: 900; line-height: 1;
+      font-size: 88px; font-weight: 900; line-height: 1;
       color: rgba(0,0,0,0.04);
-      position: absolute; top: 20px; right: 28px;
+      position: absolute; top: 18px; right: 24px;
       letter-spacing: -0.04em;
-      pointer-events: none;
+      pointer-events: none; user-select: none;
     }
     .step-label {
       font-family: 'Montserrat', sans-serif;
@@ -284,19 +284,20 @@
       margin-bottom: 14px;
     }
     .step-card h3 {
-      font-size: 20px; font-weight: 700; color: #1a1510;
-      margin-bottom: 14px; line-height: 1.25;
+      font-size: 19px; font-weight: 700; color: #1a1510;
+      margin-bottom: 12px; line-height: 1.25;
       letter-spacing: -0.015em;
     }
-    .step-card p { font-size: 15px; color: #5a5248; line-height: 1.65; }
+    .step-card p { font-size: 14.5px; color: #5a5248; line-height: 1.65; }
     .step-detail {
-      margin-top: 20px; padding-top: 18px;
+      margin-top: 20px; padding-top: 16px;
       border-top: 1px solid rgba(0,0,0,0.07);
-      font-size: 13px; color: #8C5520; font-weight: 600;
+      font-size: 12.5px; color: #8C5520; font-weight: 600;
       font-family: 'Montserrat', sans-serif;
       letter-spacing: 0.02em;
     }
 
+    /* ━━━━ WHO IT'S FOR ━━━━ */
     .for-section {
       background: var(--dark-2);
       border-top: 1px solid var(--border-dark);
@@ -306,11 +307,11 @@
       display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
       background: var(--border-dark);
       border: 1px solid var(--border-dark);
-      margin: 48px 0;
+      margin: 44px 0;
     }
     .icp-card {
       background: var(--dark-3);
-      padding: 36px 36px 32px;
+      padding: 34px 34px 30px;
     }
     .icp-tag {
       display: inline-block;
@@ -320,25 +321,22 @@
       background: var(--copper-dim); color: var(--copper);
       border: 1px solid var(--copper-border);
       padding: 4px 10px; border-radius: 2px;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
-    .icp-card h3 {
-      font-size: 18px; font-weight: 700; color: var(--cream-hi);
-      margin-bottom: 10px;
-    }
-    .icp-card p { font-size: 15px; color: var(--cream-lo); line-height: 1.6; }
+    .icp-card h3 { font-size: 17px; font-weight: 700; color: var(--cream-hi); margin-bottom: 10px; }
+    .icp-card p { font-size: 14.5px; color: var(--cream-lo); line-height: 1.65; }
 
     .roles-strip {
       display: flex; flex-wrap: wrap; gap: 8px;
-      margin-bottom: 44px;
+      margin-bottom: 40px;
     }
     .role-tag {
-      font-size: 12px; font-weight: 600; letter-spacing: 0.05em;
+      font-size: 12px; font-weight: 600; letter-spacing: 0.04em;
       font-family: 'Montserrat', sans-serif;
       color: var(--cream-lo);
       border: 1px solid var(--cream-border);
       padding: 7px 14px; border-radius: 2px;
-      transition: all 0.2s;
+      transition: all 0.18s;
     }
     .role-tag:hover { color: var(--cream); border-color: var(--cream-lo); background: var(--cream-dim); }
 
@@ -346,81 +344,83 @@
       background: var(--dark-4);
       border: 1px solid var(--border-dark);
       border-left: 3px solid var(--copper);
-      padding: 24px 28px;
+      padding: 22px 26px;
       border-radius: 0 2px 2px 0;
     }
-    .qualifier p {
-      font-size: 15px; color: var(--cream-lo); line-height: 1.65;
-    }
+    .qualifier p { font-size: 14.5px; color: var(--cream-lo); line-height: 1.7; }
     .qualifier p strong { color: var(--cream); font-weight: 600; }
 
+    /* ━━━━ PROOF ━━━━ */
     .proof-section {
       background: var(--black);
       border-top: 1px solid var(--border-dark);
     }
     .proof-inner {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
-      align-items: center;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 72px;
+      align-items: start;
     }
-    .proof-left .section-label { color: var(--copper); }
-    .proof-left h2 { color: var(--cream-hi); margin-bottom: 24px; }
+    .proof-left h2 { color: var(--cream-hi); margin-bottom: 20px; }
     .proof-quote {
-      font-size: 19px; line-height: 1.65;
+      font-size: 18px; line-height: 1.7;
       color: var(--cream-lo);
+      font-style: italic;
       border-left: 2px solid var(--copper);
-      padding-left: 24px;
-      margin: 28px 0;
+      padding-left: 22px;
+      margin: 24px 0;
     }
     .proof-attribution {
       font-family: 'Montserrat', sans-serif;
-      font-size: 13px; font-weight: 600;
+      font-size: 12.5px; font-weight: 600;
       color: var(--cream-lo); letter-spacing: 0.04em;
+      margin-bottom: 28px;
     }
-    .proof-attribution span { color: var(--copper); }
+    .proof-attribution strong { color: var(--copper); }
+
+    .axya-block {
+      display: flex; align-items: center; gap: 14px;
+      background: var(--dark-2);
+      border: 1px solid var(--border-dark);
+      border-radius: 2px;
+      padding: 16px 20px;
+    }
+    .axya-name-block {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px; font-weight: 800;
+      color: #2E5C9A; letter-spacing: -0.01em;
+      flex-shrink: 0;
+    }
+    .axya-divider {
+      width: 1px; height: 28px;
+      background: var(--border-dark);
+      flex-shrink: 0;
+    }
+    .axya-context {
+      font-size: 13px; color: var(--cream-lo); line-height: 1.5;
+    }
+
     .proof-right {
       display: flex; flex-direction: column; gap: 1px;
     }
     .proof-metric {
       background: var(--dark-2);
-      padding: 28px 32px;
+      padding: 26px 30px;
       border: 1px solid var(--border-dark);
-      display: flex; align-items: center; gap: 24px;
+      display: flex; align-items: center; gap: 22px;
     }
     .metric-num {
       font-family: 'Montserrat', sans-serif;
-      font-size: 42px; font-weight: 900; line-height: 1;
+      font-size: 38px; font-weight: 900; line-height: 1;
       color: var(--copper); letter-spacing: -0.03em;
-      white-space: nowrap;
+      white-space: nowrap; min-width: 70px;
     }
     .metric-text h4 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 15px; font-weight: 700; color: var(--cream-hi);
-      margin-bottom: 4px;
+      font-size: 14px; font-weight: 700; color: var(--cream-hi);
+      margin-bottom: 3px;
     }
-    .metric-text p { font-size: 13px; color: var(--cream-lo); }
+    .metric-text p { font-size: 13px; color: var(--cream-lo); line-height: 1.5; }
 
-    .axya-block {
-      margin-top: 32px; padding: 20px 24px;
-      background: var(--dark-2);
-      border: 1px solid var(--border-dark);
-      border-radius: 2px;
-      display: flex; align-items: center; gap: 16px;
-    }
-    .axya-logo {
-      display: flex; align-items: center; gap: 8px;
-      flex-shrink: 0;
-    }
-    .axya-logo svg { width: 32px; height: 32px; }
-    .axya-name {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 17px; font-weight: 800;
-      color: #2E5C9A; letter-spacing: -0.01em;
-    }
-    .axya-desc {
-      font-size: 13px; color: var(--cream-lo); line-height: 1.5;
-      border-left: 1px solid var(--border-dark); padding-left: 16px;
-    }
-
+    /* ━━━━ RISK ━━━━ */
     .risk-section {
       background: var(--dark-1);
       border-top: 1px solid var(--border-dark);
@@ -433,105 +433,111 @@
       align-items: start;
     }
     .risk-left h2 {
-      font-size: clamp(28px, 3.5vw, 44px);
-      color: var(--cream-hi); margin-bottom: 16px;
+      font-size: clamp(26px, 3vw, 40px);
+      color: var(--cream-hi); margin-bottom: 14px;
     }
-    .risk-left p { font-size: 16px; color: var(--cream-lo); line-height: 1.65; }
-    .risk-items { display: flex; flex-direction: column; gap: 0; }
+    .risk-left p { font-size: 15px; color: var(--cream-lo); line-height: 1.7; }
+    .risk-items { display: flex; flex-direction: column; }
     .risk-item {
-      padding: 22px 0;
+      padding: 20px 0;
       border-bottom: 1px solid var(--border-dark);
-      display: flex; align-items: flex-start; gap: 16px;
+      display: flex; align-items: flex-start; gap: 14px;
     }
     .risk-item:first-child { border-top: 1px solid var(--border-dark); }
     .risk-check {
-      width: 22px; height: 22px; border-radius: 50%;
+      width: 20px; height: 20px; border-radius: 50%;
       background: var(--copper-dim); border: 1px solid var(--copper-border);
       display: flex; align-items: center; justify-content: center;
       flex-shrink: 0; margin-top: 2px;
     }
-    .risk-check svg { width: 10px; height: 10px; stroke: var(--copper); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
-    .risk-item-text { flex: 1; }
+    .risk-check svg { width: 9px; height: 9px; stroke: var(--copper); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
     .risk-item-text strong {
-      display: block; font-size: 15px; font-weight: 600;
+      display: block; font-size: 14.5px; font-weight: 600;
       color: var(--cream-hi); margin-bottom: 3px;
       font-family: 'Montserrat', sans-serif;
     }
-    .risk-item-text span { font-size: 14px; color: var(--cream-lo); }
+    .risk-item-text span { font-size: 13.5px; color: var(--cream-lo); line-height: 1.6; }
 
+    /* ━━━━ FINAL CTA ━━━━ */
     .cta-section {
       background: var(--dark-1);
-      padding: 120px 52px;
+      padding: 112px 52px;
       text-align: center;
       position: relative; overflow: hidden;
     }
     .cta-section::before {
       content: '';
       position: absolute; inset: 0;
-      background: radial-gradient(ellipse 60% 70% at 50% 40%, rgba(184,115,51,0.09) 0%, transparent 65%);
+      background: radial-gradient(ellipse 60% 65% at 50% 40%, rgba(184,115,51,0.08) 0%, transparent 65%);
       pointer-events: none;
     }
-    .cta-inner { max-width: 680px; margin: 0 auto; position: relative; z-index: 1; }
+    .cta-inner { max-width: 640px; margin: 0 auto; position: relative; z-index: 1; }
     .cta-section .section-label { justify-content: center; }
     .cta-section .section-label::after { display: none; }
-    .cta-section h2 {
-      color: var(--cream-hi); margin-bottom: 20px;
+    .cta-section h2 { color: var(--cream-hi); margin-bottom: 18px; }
+    .cta-sub {
+      font-size: 18px; color: var(--cream-lo); margin-bottom: 40px;
+      line-height: 1.7;
     }
-    .cta-section .cta-sub {
-      font-size: 19px; color: var(--cream-lo); margin-bottom: 44px;
-      line-height: 1.65;
-    }
-    .cta-section .cta-sub strong { color: var(--cream); font-weight: 500; }
-    .cta-btns { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .cta-sub strong { color: var(--cream); font-weight: 500; }
+    .cta-btns { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
     .cta-trust {
-      margin-top: 28px; font-size: 13px; color: var(--cream-lo);
-      letter-spacing: 0.02em;
+      margin-top: 26px; font-size: 12.5px; color: var(--cream-lo);
+      letter-spacing: 0.03em;
     }
     .cta-trust span { color: var(--copper); font-weight: 600; }
 
+    /* ━━━━ FOOTER ━━━━ */
     footer {
       background: var(--black);
       border-top: 1px solid var(--border-dark);
-      padding: 44px 52px;
+      padding: 40px 52px;
       display: flex; align-items: center; justify-content: space-between;
       flex-wrap: wrap; gap: 20px;
     }
-    .footer-left { display: flex; align-items: center; gap: 32px; }
-    .footer-right { font-size: 13px; color: var(--cream-lo); text-align: right; line-height: 1.6; }
+    .footer-left { display: flex; align-items: center; gap: 28px; }
+    .footer-logo {
+      display: block;
+      height: 28px;
+      width: auto;
+      opacity: 0.45;
+    }
+    .footer-tagline { font-size: 12.5px; color: var(--cream-lo); }
+    .footer-right { font-size: 12.5px; color: var(--cream-lo); text-align: right; line-height: 1.6; }
     .footer-right a { color: var(--copper); text-decoration: none; }
     .footer-right a:hover { color: var(--copper-hi); }
 
-    .logo-nav { height: 42px; width: auto; display: block; }
-    .logo-footer { height: 30px; width: auto; display: block; }
-
-    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    /* ━━━━ ANIMATIONS ━━━━ */
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
-    .fade-up.delay-1 { transition-delay: 0.08s; }
-    .fade-up.delay-2 { transition-delay: 0.16s; }
-    .fade-up.delay-3 { transition-delay: 0.24s; }
-    .fade-up.delay-4 { transition-delay: 0.32s; }
+    .fade-up.d1 { transition-delay: 0.08s; }
+    .fade-up.d2 { transition-delay: 0.16s; }
+    .fade-up.d3 { transition-delay: 0.24s; }
+    .fade-up.d4 { transition-delay: 0.32s; }
 
+    /* ━━━━ RESPONSIVE ━━━━ */
     @media (max-width: 900px) {
       nav { padding: 0 24px; }
       .nav-right .nav-link { display: none; }
-      section { padding: 72px 24px; }
-      .hero { padding: 100px 24px 64px; }
+      section { padding: 68px 24px; }
+      .hero { padding: 96px 24px 60px; }
       .how-steps { grid-template-columns: 1fr; }
       .pain-grid { grid-template-columns: 1fr; }
       .icp-grid { grid-template-columns: 1fr; }
-      .proof-inner { grid-template-columns: 1fr; gap: 48px; }
-      .risk-inner { grid-template-columns: 1fr; gap: 36px; }
-      .risk-section { padding: 72px 24px; }
-      .cta-section { padding: 80px 24px; }
-      footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
+      .proof-inner { grid-template-columns: 1fr; gap: 44px; }
+      .risk-inner { grid-template-columns: 1fr; gap: 32px; }
+      .risk-section { padding: 68px 24px; }
+      .cta-section { padding: 72px 24px; }
+      footer { padding: 28px 24px; flex-direction: column; align-items: flex-start; }
       .footer-right { text-align: left; }
       .hero-proof-strip { flex-direction: column; width: 100%; }
       .proof-cell { border-right: none; border-bottom: 1px solid var(--cream-border); }
       .proof-cell:last-child { border-bottom: none; }
+      .mid-cta-band { flex-direction: column; align-items: flex-start; }
     }
     @media (max-width: 520px) {
-      h1 { font-size: 40px; }
-      h2 { font-size: 30px; }
+      h1 { font-size: 38px; letter-spacing: -0.025em; }
+      h2 { font-size: 28px; }
       .hero-ctas { flex-direction: column; align-items: flex-start; }
       .cta-btns { flex-direction: column; }
     }
@@ -539,24 +545,26 @@
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <a href="#" aria-label="StartupX">
-    <img src="startupx-logo.png" style="height:42px; width:auto; display:block;" alt="StartupX" />
+  <a href="#top" aria-label="StartupX">
+    <img src="startupx-logo.png" class="nav-logo" alt="StartupX" />
   </a>
   <div class="nav-right">
     <a href="#how" class="nav-link">How It Works</a>
-    <a href="#proof" class="nav-link">Proof</a>
+    <a href="#proof" class="nav-link">Results</a>
     <a href="#book" class="nav-link">Contact</a>
     <a href="https://calendly.com/startupx-recruiting/30min" target="_blank" rel="noopener" class="btn btn-nav">Book 15 Min</a>
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero" id="top">
   <div class="hero-inner">
-    <div class="hero-eyebrow">Founder-First Recruiting</div>
-    <h1>Your next hire is a<br><em>10×</em> decision.</h1>
+    <div class="hero-eyebrow">Recruiting for early-stage startups</div>
+    <h1>A week of stalling is a week your<br><em>competition doesn't.</em></h1>
     <p class="hero-sub">
-      StartupX finds 2–3 startup-ready candidates for Seed–Series A founders in Toronto, Montreal, and Vancouver — faster than any agency, without the bloat.
+      We find 2–3 pre-vetted operators for Seed to Series A teams in Toronto, Montreal, and Vancouver. Shortlist in 10 days. Nothing to pay until you hire.
     </p>
     <div class="hero-ctas">
       <a href="https://calendly.com/startupx-recruiting/30min" target="_blank" rel="noopener" class="btn btn-copper">Book a Free 15-Minute Call</a>
@@ -564,7 +572,7 @@
     </div>
     <div class="hero-proof-strip fade-up">
       <div class="proof-cell">
-        <div class="proof-num">2–3<span></span></div>
+        <div class="proof-num">2–3</div>
         <div class="proof-label">Curated candidates</div>
       </div>
       <div class="proof-cell">
@@ -579,109 +587,111 @@
   </div>
 </section>
 
+<!-- PROBLEM -->
 <section class="problem-section" id="problem">
   <div class="section-inner">
-    <div class="section-label fade-up">The real cost of a bad hire</div>
+    <div class="section-label fade-up">Why recruiting fails at this stage</div>
     <p class="problem-lead fade-up">
-      Early-stage recruiting is broken for founders.<br>
-      <em>Agencies optimize for placement fees.</em> Job boards return noise.<br>
-      Your time — and the wrong hire — costs more than any retainer.
+      You're running the product, managing investors, and trying to close customers. Recruiting well takes time you don't have.<br>
+      <em>And the wrong hire costs more than the search ever did.</em>
     </p>
     <div class="pain-grid">
       <div class="pain-card fade-up">
         <div class="pain-icon">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
         </div>
-        <h3>Months of interviews, zero hires</h3>
-        <p>Generic job boards flood your inbox with unqualified applicants. You spend 6 weeks screening people who've never worked in a company under 200 people.</p>
+        <h3>You're screening people who've never worked in a startup</h3>
+        <p>Job boards return volume, not fit. You spend weeks filtering candidates who can't handle ambiguity, no process, or a team of eight.</p>
       </div>
-      <div class="pain-card fade-up delay-1">
+      <div class="pain-card fade-up d1">
         <div class="pain-icon">
           <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
         </div>
-        <h3>Traditional agencies move too slow</h3>
-        <p>Retainer-based firms are built for enterprise timelines. By the time they deliver a shortlist, your best candidates have accepted other offers.</p>
+        <h3>Agencies aren't built for your timeline</h3>
+        <p>Enterprise recruiting firms move on enterprise timelines. By the time they deliver a shortlist, the best candidates have taken other offers.</p>
       </div>
-      <div class="pain-card fade-up delay-2">
+      <div class="pain-card fade-up d2">
         <div class="pain-icon">
           <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
         </div>
-        <h3>Placement fees eat your runway</h3>
-        <p>20–25% of first-year salary, upfront. Before you even know if the hire works out. That's $20K–30K on a single CS hire before they've sent one email.</p>
+        <h3>20% of salary before you've seen one email</h3>
+        <p>Upfront retainers are standard in this industry. That's $18K–28K on a single CS hire before anyone's done anything. We think that's backwards.</p>
       </div>
-      <div class="pain-card fade-up delay-3">
+      <div class="pain-card fade-up d3">
         <div class="pain-icon">
           <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
-        <h3>Candidates who can't handle early-stage</h3>
-        <p>Someone with a great enterprise résumé and zero tolerance for ambiguity. Six months in, you're both miserable. That's not a recruiting problem — it was a fit problem from day one.</p>
+        <h3>The wrong hire is the most expensive mistake you'll make</h3>
+        <p>A bad fit at this stage doesn't just cost money. It costs trust, team morale, and six months of momentum you won't get back.</p>
       </div>
     </div>
     <div class="mid-cta-band fade-up">
-      <p>StartupX was built to solve exactly this. <span>15 minutes to find out if we're the right fit.</span></p>
+      <p>We built StartupX to fix this. <span>15 minutes to find out if we can help.</span></p>
       <a href="https://calendly.com/startupx-recruiting/30min" target="_blank" rel="noopener" class="btn btn-copper">Book a Free 15-Minute Call</a>
     </div>
   </div>
 </section>
 
+<!-- HOW IT WORKS -->
 <section class="how-section" id="how">
   <div class="section-inner">
     <div class="section-label fade-up">The process</div>
-    <h2 class="fade-up" style="color:#1a1510;">Built for founder speed,<br>not agency timelines.</h2>
+    <h2 class="fade-up" style="color:#1a1510;">Simple. Fast. No surprises.</h2>
     <div class="how-steps">
       <div class="step-card fade-up">
         <span class="step-num">01</span>
         <div class="step-label">Week 1</div>
-        <h3>We learn the role — and your company</h3>
-        <p>A focused brief call. We want to understand your stage, the gap in your team, and what "startup-ready" actually means for this hire. No intake form. No account manager handoffs.</p>
-        <div class="step-detail">→ 15-minute call → Written brief → Role confirmed</div>
+        <h3>We learn your role</h3>
+        <p>A 15-minute call. We want to know what the role is, what good looks like, and why it matters right now. No intake form. No account manager handoffs. Just a direct conversation.</p>
+        <div class="step-detail">15-min call &rarr; written brief &rarr; search begins</div>
       </div>
-      <div class="step-card fade-up delay-1">
+      <div class="step-card fade-up d1">
         <span class="step-num">02</span>
         <div class="step-label">Week 1–2</div>
-        <h3>Active sourcing, not passive posting</h3>
-        <p>We go find your candidates. Direct outreach to operators who've done the job before, often at companies just like yours. We filter on fit, not just keywords.</p>
-        <div class="step-detail">→ 2–3 curated candidates → In 10 days or less</div>
+        <h3>We source. You review.</h3>
+        <p>We go find your candidates. Direct outreach to operators who've done the job before, often at companies at your exact stage. You get 2–3 profiles with a write-up on why each one is worth your time.</p>
+        <div class="step-detail">2–3 candidates &rarr; in 10 days or less</div>
       </div>
-      <div class="step-card fade-up delay-2">
+      <div class="step-card fade-up d2">
         <span class="step-num">03</span>
         <div class="step-label">Ongoing</div>
-        <h3>You hire. We close the loop.</h3>
-        <p>We stay in the process — coordinating interviews, managing communication, handling offers. You focus on the decision, not the logistics. No cost until you make the hire.</p>
-        <div class="step-detail">→ $0 unless you hire → No surprise fees</div>
+        <h3>You decide. We handle the rest.</h3>
+        <p>We coordinate interviews, manage communication, and close the loop on offers. You focus on the decision. We do the admin. Nothing to pay until someone accepts.</p>
+        <div class="step-detail">$0 unless you hire &rarr; no hidden fees</div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- WHO IT'S FOR -->
 <section class="for-section" id="for">
   <div class="section-inner">
     <div class="section-label fade-up">Who we work with</div>
-    <h2 class="fade-up">Made for founders who<br>move fast and hire smart.</h2>
+    <h2 class="fade-up">You should be talking to us if...</h2>
     <div class="icp-grid fade-up">
       <div class="icp-card">
-        <div class="icp-tag">Post-Product</div>
-        <h3>Seed to Series A founders</h3>
-        <p>You've found product-market fit and you're scaling the team. Your next hire is a force multiplier — or a 6-month setback. You need speed <em>and</em> quality, not one or the other.</p>
+        <div class="icp-tag">Post-traction</div>
+        <h3>You're Seed to Series A</h3>
+        <p>You have a product, early customers, and a team that needs to grow. You know that the next hire is either a force multiplier or a six-month setback. Speed matters.</p>
       </div>
       <div class="icp-card">
-        <div class="icp-tag">No time to recruit</div>
-        <h3>Operators who are already stretched</h3>
-        <p>You're running the product, the customers, and the fundraise. You don't have 10 hours a week to review résumés. You need someone you trust to handle sourcing while you stay focused.</p>
+        <div class="icp-tag">Bandwidth</div>
+        <h3>You don't have time to recruit</h3>
+        <p>You're running the product, managing customers, and staying on top of fundraising. Reviewing 40 resumes isn't something you have time for. We handle sourcing so you stay focused.</p>
       </div>
       <div class="icp-card">
         <div class="icp-tag">Toronto · Montreal · Vancouver</div>
-        <h3>Canadian tech startups</h3>
-        <p>We know the Canadian talent market — where the best operators are, what they're making, and what will make them move. Local knowledge matters at the offer stage.</p>
+        <h3>You're building in Canada</h3>
+        <p>We know where the best operators are, what they're making, and what it takes to get them to move. Local market knowledge is the difference at the offer stage.</p>
       </div>
       <div class="icp-card">
-        <div class="icp-tag">Revenue-generating roles</div>
-        <h3>GTM, CS, Sales, Ops, BizDev</h3>
-        <p>We focus on the roles that directly affect revenue: customer success, sales development, account executives, operations, and business development — startup-specific, not generic.</p>
+        <div class="icp-tag">GTM and CS roles</div>
+        <h3>You're hiring for revenue</h3>
+        <p>Customer success, account executives, sales development, operations, partnerships. We focus on the roles that directly affect your top line, filled by people who've done it before.</p>
       </div>
     </div>
 
-    <div class="section-label fade-up" style="margin-bottom:16px;">Roles we fill</div>
+    <div class="section-label fade-up" style="margin-bottom:14px;">Roles we fill</div>
     <div class="roles-strip fade-up">
       <span class="role-tag">Customer Success</span>
       <span class="role-tag">Account Executive</span>
@@ -695,72 +705,51 @@
     </div>
 
     <div class="qualifier fade-up">
-      <p><strong>StartupX isn't for everyone.</strong> We work best with founders who have a clear sense of the role and are ready to move fast when the right person shows up. If you're still exploring whether to hire, a conversation with us can help clarify that — but the best results happen when both sides are committed.</p>
+      <p><strong>We don't work with everyone.</strong> We work best with founders who know what they need and are ready to move when the right person shows up. If you're still figuring out whether to hire, we can help with that too. But the best results happen when both sides are serious.</p>
     </div>
   </div>
 </section>
 
+<!-- PROOF -->
 <section class="proof-section" id="proof">
   <div class="section-inner">
     <div class="proof-inner">
       <div class="proof-left fade-up">
-        <div class="section-label">Case study</div>
-        <h2>A real search,<br>closed fast.</h2>
-        <div class="proof-quote">
-          Axya had been trying to fill a <strong>Customer Support Team Lead</strong> role for roughly <strong>4 months</strong>.
-          StartupX stepped in, ran the search, and helped close the hire after identifying a strong candidate who was also considering a competing offer at <strong>$100K</strong>, while the role had originally been scoped closer to <strong>$75K–80K</strong>.
-        </div>
-        <div class="proof-attribution">
-          Customer Support Team Lead — <span>Axya</span> · Seed-stage B2B · Montreal
-        </div>
-
+        <div class="section-label">Client result</div>
+        <h2>What it looks like in practice.</h2>
+        <p style="font-size:15px; color:var(--cream-lo); line-height:1.75; margin-bottom:24px;">
+          Axya had a Customer Support Team Lead role open for four months with no hire. We sourced a candidate who was strong enough to come in with a competing offer at $100K. The role was posted at $75–80K.
+        </p>
+        <p style="font-size:15px; color:var(--cream-lo); line-height:1.75; margin-bottom:28px;">
+          We worked the close. The candidate chose Axya. The role was filled.
+        </p>
         <div class="axya-block">
-          <div class="axya-logo">
-            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="3" y="2" width="18" height="24" rx="2.5" fill="#E3EDF8" stroke="#2E5C9A" stroke-width="1.5"/>
-              <path d="M15 2H21V9L15 2Z" fill="#5B9BD5" opacity="0.85"/>
-              <line x1="15" y1="2" x2="21" y2="9" stroke="#2E5C9A" stroke-width="1.4"/>
-              <rect x="6" y="13" width="10" height="1.5" rx="0.75" fill="#2E5C9A" opacity="0.4"/>
-              <rect x="6" y="16.5" width="8" height="1.5" rx="0.75" fill="#2E5C9A" opacity="0.4"/>
-              <rect x="6" y="20" width="6" height="1.5" rx="0.75" fill="#2E5C9A" opacity="0.4"/>
-              <circle cx="24" cy="24" r="7" fill="#2E5C9A"/>
-              <text x="24" y="27.5" text-anchor="middle" fill="#fff" font-family="Montserrat,sans-serif" font-size="8" font-weight="800">A</text>
-            </svg>
-            <span class="axya-name">Axya</span>
-          </div>
-          <div class="axya-desc">
-            B2B procurement platform · Seed · Montreal
-          </div>
+          <div class="axya-name-block">Axya</div>
+          <div class="axya-divider"></div>
+          <div class="axya-context">B2B procurement platform &middot; Seed &middot; Montreal</div>
         </div>
       </div>
 
-      <div class="proof-right fade-up delay-2">
+      <div class="proof-right fade-up d2">
         <div class="proof-metric">
-          <div class="metric-num">4</div>
+          <div class="metric-num">2–3</div>
           <div class="metric-text">
-            <h4>Months the role was open</h4>
-            <p>Axya had been trying to close the search long before StartupX stepped in</p>
+            <h4>Candidates, not a firehose</h4>
+            <p>Every profile is vetted and relevant. Not a keyword match.</p>
           </div>
         </div>
         <div class="proof-metric">
           <div class="metric-num">10</div>
           <div class="metric-text">
             <h4>Days to a shortlist</h4>
-            <p>From brief call to a focused shortlist of qualified candidates</p>
+            <p>From the brief call to 2–3 vetted candidates in your inbox</p>
           </div>
         </div>
         <div class="proof-metric">
-          <div class="metric-num">$100K</div>
+          <div class="metric-num">$0</div>
           <div class="metric-text">
-            <h4>Competing offer in play</h4>
-            <p>The candidate was weighing a higher external offer during the process</p>
-          </div>
-        </div>
-        <div class="proof-metric">
-          <div class="metric-num">$75–80K</div>
-          <div class="metric-text">
-            <h4>Original role range</h4>
-            <p>The search required navigating fit, speed, and compensation reality</p>
+            <h4>No upfront cost</h4>
+            <p>You pay nothing until you make a hire. No retainers, no surprises.</p>
           </div>
         </div>
       </div>
@@ -768,79 +757,82 @@
   </div>
 </section>
 
+<!-- RISK -->
 <section class="risk-section" id="risk">
   <div class="risk-inner">
     <div class="risk-left fade-up">
-      <h2>Why this isn't<br>a big commitment.</h2>
-      <p>A 15-minute call costs you nothing. If there's no fit, we say so. If there is, we move fast — and you don't pay until the hire is made.</p>
+      <h2>It starts with a 15-minute call.</h2>
+      <p>15 minutes. Free. We'll tell you honestly whether we can help, and if we can't, we'll say so upfront. No pitch. No pressure.</p>
     </div>
     <div class="risk-items">
       <div class="risk-item fade-up">
         <div class="risk-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
         <div class="risk-item-text">
           <strong>No retainer, no upfront fee</strong>
-          <span>You pay only when you make a successful hire. Zero risk to starting the conversation.</span>
+          <span>You pay only when you make a hire. Zero cost to starting the conversation.</span>
         </div>
       </div>
-      <div class="risk-item fade-up delay-1">
+      <div class="risk-item fade-up d1">
         <div class="risk-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
         <div class="risk-item-text">
-          <strong>15-minute discovery, not a 2-hour intake</strong>
-          <span>We get what we need quickly so we can start immediately — no lengthy onboarding process.</span>
+          <strong>15 minutes, not a 2-hour intake</strong>
+          <span>We get what we need quickly and start immediately. No lengthy onboarding.</span>
         </div>
       </div>
-      <div class="risk-item fade-up delay-2">
+      <div class="risk-item fade-up d2">
         <div class="risk-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
         <div class="risk-item-text">
           <strong>You stay in control</strong>
-          <span>We make introductions. You make the call. No pressure, no hard closes, no commission-driven pushes.</span>
+          <span>We make introductions. You make the call. No commission-driven pressure.</span>
         </div>
       </div>
-      <div class="risk-item fade-up delay-3">
+      <div class="risk-item fade-up d3">
         <div class="risk-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
         <div class="risk-item-text">
-          <strong>If it's not a fit, we'll tell you</strong>
-          <span>We'd rather turn down the engagement than waste your time on a search we can't win.</span>
+          <strong>If we can't help, we'll tell you</strong>
+          <span>We'd rather say no upfront than waste your time on a search we can't win.</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- CTA -->
 <section class="cta-section" id="book">
   <div class="cta-inner">
-    <div class="section-label fade-up">Ready to move?</div>
-    <h2 class="fade-up">15 minutes.<br>That's all it takes.</h2>
+    <div class="section-label fade-up">Let's talk</div>
+    <h2 class="fade-up">Book 15 minutes.<br>We'll be straight with you.</h2>
     <p class="cta-sub fade-up">
-      Book a free 15-minute call. We'll tell you honestly whether we can help, what the timeline looks like, and what the cost is. <strong>No pitch. No pressure.</strong>
+      We'll tell you what we can do, what it costs, and how fast we can move. If it's not a fit, we'll say so in the first five minutes. <strong>No pitch. No pressure.</strong>
     </p>
     <div class="cta-btns fade-up">
-      <a href="https://calendly.com/startupx-recruiting/30min" target="_blank" rel="noopener" class="btn btn-copper">Book a Free 15-Minute Call →</a>
+      <a href="https://calendly.com/startupx-recruiting/30min" target="_blank" rel="noopener" class="btn btn-copper">Book a Free 15-Minute Call &rarr;</a>
       <a href="mailto:startupx.recruiting@gmail.com" class="btn btn-outline">Send us a note</a>
     </div>
-    <p class="cta-trust fade-up"><span>$0 upfront</span> &nbsp;·&nbsp; Toronto, Montreal, Vancouver &nbsp;·&nbsp; Seed to Series A</p>
+    <p class="cta-trust fade-up"><span>$0 upfront</span> &nbsp;&middot;&nbsp; Toronto, Montreal, Vancouver &nbsp;&middot;&nbsp; Seed to Series A</p>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <div class="footer-left">
     <a href="#top" aria-label="StartupX">
-      <img src="startupx-logo.png" style="height:30px; width:auto; display:block; opacity:0.5;" alt="StartupX" />
+      <img src="startupx-logo.png" class="footer-logo" alt="StartupX" />
     </a>
-    <span style="font-size:13px; color:var(--cream-lo);">Founder-first recruiting for Canadian startups</span>
+    <span class="footer-tagline">Founder-first recruiting for Canadian startups</span>
   </div>
   <div class="footer-right">
-    Toronto · Montreal · Vancouver<br>
+    Toronto &middot; Montreal &middot; Vancouver<br>
     <a href="mailto:startupx.recruiting@gmail.com">startupx.recruiting@gmail.com</a>
   </div>
 </footer>
 
 <script>
-  const observer = new IntersectionObserver(
-    entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }),
-    { threshold: 0.12 }
+  const io = new IntersectionObserver(
+    es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }),
+    { threshold: 0.1 }
   );
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
 </script>
 </body>
 </html>
