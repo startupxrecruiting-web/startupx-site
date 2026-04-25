@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StartupX | Stop Stalling on Your Next Hire</title>
-  <meta name="description" content="StartupX places startup-ready operators for Seed to Series A founders in Toronto, Montreal, and Vancouver. 2–3 curated candidates in 10 days. Nothing to pay until you hire." />
+  <title>StartupX | Your Next Hire Is Interviewing Right Now</title>
+  <meta name="description" content="StartupX delivers 2–3 vetted, startup-ready candidates to founders and revenue leaders at seed to Series A companies. Success-fee only. Shortlist in 10 days." />
   <link rel="icon" href="startupx-logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -268,6 +268,11 @@
       padding: 40px 32px 36px;
       position: relative;
       border: 1px solid rgba(0,0,0,0.07);
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+    .step-card:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
     }
     .step-num {
       font-family: 'Montserrat', sans-serif;
@@ -295,6 +300,23 @@
       font-size: 12.5px; color: #8C5520; font-weight: 600;
       font-family: 'Montserrat', sans-serif;
       letter-spacing: 0.02em;
+    }
+    .vetted-callout {
+      margin-top: 28px;
+      background: rgba(140,85,32,0.08);
+      border-left: 3px solid var(--copper);
+      padding: 20px 24px;
+      border-radius: 0 2px 2px 0;
+    }
+    .vetted-callout strong {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.16em;
+      text-transform: uppercase; color: #8C5520;
+      margin-bottom: 8px;
+    }
+    .vetted-callout p {
+      font-size: 14px; color: #5a5248; line-height: 1.65;
     }
 
     /* ━━━━ WHO IT'S FOR ━━━━ */
@@ -349,6 +371,37 @@
     }
     .qualifier p { font-size: 14.5px; color: var(--cream-lo); line-height: 1.7; }
     .qualifier p strong { color: var(--cream); font-weight: 600; }
+
+    /* Secondary roles */
+    .secondary-roles {
+      margin-top: 48px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border-dark);
+    }
+    .secondary-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--cream-lo);
+      margin-bottom: 10px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .secondary-label::after {
+      content: ''; width: 24px; height: 1px; background: rgba(203,198,187,0.15);
+    }
+    .secondary-roles p {
+      font-size: 14px; color: var(--cream-lo); margin-bottom: 16px;
+      max-width: 500px; line-height: 1.6;
+    }
+    .secondary-strip {
+      display: flex; flex-wrap: wrap; gap: 8px;
+    }
+    .role-tag-secondary {
+      font-size: 11.5px; font-weight: 500; letter-spacing: 0.03em;
+      font-family: 'Montserrat', sans-serif;
+      color: rgba(142,136,128,0.55);
+      border: 1px solid rgba(203,198,187,0.07);
+      padding: 6px 12px; border-radius: 2px;
+    }
 
     /* ━━━━ PROOF ━━━━ */
     .proof-section {
@@ -486,6 +539,14 @@
       letter-spacing: 0.03em;
     }
     .cta-trust span { color: var(--copper); font-weight: 600; }
+    .intake-nudge {
+      display: block; margin-top: 14px;
+      font-size: 12.5px; color: var(--cream-lo);
+      text-decoration: none; letter-spacing: 0.01em;
+      transition: color 0.2s ease;
+    }
+    .intake-nudge:hover { color: var(--copper); }
+    .intake-nudge span { text-decoration: underline; text-underline-offset: 3px; }
 
     /* ━━━━ FOOTER ━━━━ */
     footer {
@@ -554,7 +615,7 @@
     <a href="#how" class="nav-link">How It Works</a>
     <a href="#proof" class="nav-link">Results</a>
     <a href="#book" class="nav-link">Contact</a>
-    <a href="https://calendly.com/startupx-recruiting/30min" target="_blank" rel="noopener" class="btn btn-nav">Book 15 Min</a>
+    <a href="https://calendly.com/startupx-recruiting/30min" target="_blank" rel="noopener" class="btn btn-nav">Book a Call</a>
   </div>
 </nav>
 
@@ -562,18 +623,19 @@
 <section class="hero" id="top">
   <div class="hero-inner">
     <div class="hero-eyebrow">Recruiting for early-stage startups</div>
-    <h1>A week of stalling is a week your<br><em>competition doesn't.</em></h1>
+    <h1>Every week your role stays open,<br><em>your best candidate takes another offer.</em></h1>
     <p class="hero-sub">
-      We find 2–3 pre-vetted operators for Seed to Series A teams in Toronto, Montreal, and Vancouver. Shortlist in 10 days. Nothing to pay until you hire.
+      We find 2–3 pre-vetted candidates for Seed to Series A teams in Toronto, Montreal, and Vancouver. Shortlist in 10 days. No fee until your hire starts.
     </p>
     <div class="hero-ctas">
-      <a href="https://calendly.com/startupx-recruiting/30min" target="_blank" rel="noopener" class="btn btn-copper">Book a Free 15-Minute Call</a>
+      <a href="https://calendly.com/startupx-recruiting/30min" target="_blank" rel="noopener" class="btn btn-copper">Book a No-Obligation Discovery Call</a>
       <a href="#how" class="btn btn-outline">See How It Works</a>
     </div>
+    <a href="intake.html" class="intake-nudge fade-up">Prefer to submit a brief first? <span>Start here →</span></a>
     <div class="hero-proof-strip fade-up">
       <div class="proof-cell">
         <div class="proof-num">2–3</div>
-        <div class="proof-label">Curated candidates</div>
+        <div class="proof-label">Vetted candidates</div>
       </div>
       <div class="proof-cell">
         <div class="proof-num">10<span> days</span></div>
@@ -581,7 +643,7 @@
       </div>
       <div class="proof-cell">
         <div class="proof-num">$<span>0</span></div>
-        <div class="proof-label">Until you hire</div>
+        <div class="proof-label">Success fee only</div>
       </div>
     </div>
   </div>
@@ -626,8 +688,8 @@
       </div>
     </div>
     <div class="mid-cta-band fade-up">
-      <p>We built StartupX to fix this. <span>15 minutes to find out if we can help.</span></p>
-      <a href="https://calendly.com/startupx-recruiting/30min" target="_blank" rel="noopener" class="btn btn-copper">Book a Free 15-Minute Call</a>
+      <p>We built StartupX to fix this. <span>Book a no-obligation discovery call to find out if we can help.</span></p>
+      <a href="https://calendly.com/startupx-recruiting/30min" target="_blank" rel="noopener" class="btn btn-copper">Book a No-Obligation Discovery Call</a>
     </div>
   </div>
 </section>
@@ -641,24 +703,28 @@
       <div class="step-card fade-up">
         <span class="step-num">01</span>
         <div class="step-label">Week 1</div>
-        <h3>We learn your role</h3>
-        <p>A 15-minute call. We want to know what the role is, what good looks like, and why it matters right now. No intake form. No account manager handoffs. Just a direct conversation.</p>
-        <div class="step-detail">15-min call &rarr; written brief &rarr; search begins</div>
+        <h3>We align before we source.</h3>
+        <p>We run a focused discovery conversation to understand the role deeply. We want to know what the role is, what success looks like and why this hire matters right now. No intake form. Just direct alignment before we start sourcing.</p>
+        <div class="step-detail">Discovery call &rarr; written brief &rarr; search begins</div>
       </div>
       <div class="step-card fade-up d1">
         <span class="step-num">02</span>
         <div class="step-label">Week 1–2</div>
-        <h3>We source. You review.</h3>
-        <p>We go find your candidates. Direct outreach to operators who've done the job before, often at companies at your exact stage. You get 2–3 profiles with a write-up on why each one is worth your time.</p>
-        <div class="step-detail">2–3 candidates &rarr; in 10 days or less</div>
+        <h3>We match. You review.</h3>
+        <p>We pull from our actively managed pipeline of pre-vetted, startup-ready operators. People we've already identified and assessed before your search begins. You get 2–3 vetted profiles with a write-up on why each one is worth your time.</p>
+        <div class="step-detail">2–3 vetted candidates &rarr; in 10 days or less</div>
       </div>
       <div class="step-card fade-up d2">
         <span class="step-num">03</span>
         <div class="step-label">Ongoing</div>
-        <h3>You decide. We handle the rest.</h3>
-        <p>We coordinate interviews, manage communication, and close the loop on offers. You focus on the decision. We do the admin. Nothing to pay until someone accepts.</p>
-        <div class="step-detail">$0 unless you hire &rarr; no hidden fees</div>
+        <h3>We present our recommendation. You make the final call.</h3>
+        <p>We don't just deliver names. We give you a ranked recommendation and our informed opinion on fit. We coordinate interviews, manage communication, and stay involved through close. You make the decision; we handle everything around it.</p>
+        <div class="step-detail">$0 until day one &rarr; no hidden fees</div>
       </div>
+    </div>
+    <div class="vetted-callout fade-up">
+      <strong>What "vetted" means at StartupX</strong>
+      <p>Every candidate in our pipeline has been assessed for ownership mindset, startup readiness, ambiguity tolerance, and direct communication ability. Not resume-matched. Evaluated for the reality of an early-stage environment.</p>
     </div>
   </div>
 </section>
@@ -685,28 +751,41 @@
         <p>We know where the best operators are, what they're making, and what it takes to get them to move. Local market knowledge is the difference at the offer stage.</p>
       </div>
       <div class="icp-card">
-        <div class="icp-tag">GTM and CS roles</div>
+        <div class="icp-tag">GTM and revenue roles</div>
         <h3>You're hiring for revenue</h3>
-        <p>Customer success, account executives, sales development, operations, partnerships. We focus on the roles that directly affect your top line, filled by people who've done it before.</p>
+        <p>Account executives, BDRs, SDRs, sales development, revenue operations, partnerships. We focus on the roles that directly affect your top line, filled by people who've done it before.</p>
       </div>
     </div>
 
     <div class="section-label fade-up" style="margin-bottom:14px;">Roles we fill</div>
     <div class="roles-strip fade-up">
-      <span class="role-tag">Customer Success</span>
       <span class="role-tag">Account Executive</span>
-      <span class="role-tag">Sales Development</span>
+      <span class="role-tag">Business Development Rep</span>
+      <span class="role-tag">Sales Development Rep</span>
+      <span class="role-tag">Inside Sales Rep</span>
       <span class="role-tag">Revenue Operations</span>
-      <span class="role-tag">Business Development</span>
-      <span class="role-tag">Partnerships</span>
-      <span class="role-tag">Customer Support Lead</span>
-      <span class="role-tag">GTM Operations</span>
+      <span class="role-tag">GTM Lead</span>
       <span class="role-tag">Account Management</span>
+      <span class="role-tag">Partnerships</span>
+      <span class="role-tag">Business Development</span>
     </div>
 
     <div class="qualifier fade-up">
-      <p><strong>We don't work with everyone.</strong> We work best with founders who know what they need and are ready to move when the right person shows up. If you're still figuring out whether to hire, we can help with that too. But the best results happen when both sides are serious.</p>
+      <p><strong>We don't work with everyone.</strong> We work best with founders and revenue leaders who know what they need and are ready to move when the right person shows up. If you're still figuring out whether to hire, we can help with that too. But the best results happen when both sides are serious.</p>
     </div>
+
+    <div class="secondary-roles fade-up">
+      <div class="secondary-label">Also hiring beyond sales?</div>
+      <p>If you're building ops, CS, or founder-adjacent roles alongside your revenue team, we handle those too.</p>
+      <div class="secondary-strip">
+        <span class="role-tag-secondary">Customer Success</span>
+        <span class="role-tag-secondary">Customer Support Lead</span>
+        <span class="role-tag-secondary">Operations and Systems</span>
+        <span class="role-tag-secondary">Founder-adjacent generalist</span>
+        <span class="role-tag-secondary">Early-stage ops</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -718,7 +797,7 @@
         <div class="section-label">Client result</div>
         <h2>What it looks like in practice.</h2>
         <p style="font-size:15px; color:var(--cream-lo); line-height:1.75; margin-bottom:24px;">
-          Axya had a Customer Support Team Lead role open for four months with no hire. We sourced a candidate who was strong enough to come in with a competing offer at $100K. The role was posted at $75–80K.
+          Axya had a Customer Support Team Lead role open for four months with no hire. We sourced a vetted candidate who was strong enough to come in with a competing offer at $100K. The role was posted at $75–80K.
         </p>
         <p style="font-size:15px; color:var(--cream-lo); line-height:1.75; margin-bottom:28px;">
           We worked the close. The candidate chose Axya. The role was filled.
@@ -734,22 +813,22 @@
         <div class="proof-metric">
           <div class="metric-num">2–3</div>
           <div class="metric-text">
-            <h4>Candidates, not a firehose</h4>
-            <p>Every profile is vetted and relevant. Not a keyword match.</p>
+            <h4>Vetted candidates, not a firehose</h4>
+            <p>Every profile is assessed for startup fit. Not a keyword match.</p>
           </div>
         </div>
         <div class="proof-metric">
           <div class="metric-num">10</div>
           <div class="metric-text">
             <h4>Days to a shortlist</h4>
-            <p>From the brief call to 2–3 vetted candidates in your inbox</p>
+            <p>From the discovery call to 2–3 vetted candidates in your inbox.</p>
           </div>
         </div>
         <div class="proof-metric">
           <div class="metric-num">$0</div>
           <div class="metric-text">
-            <h4>No upfront cost</h4>
-            <p>You pay nothing until you make a hire. No retainers, no surprises.</p>
+            <h4>No retainer. You pay only when your hire starts.</h4>
+            <p>No upfront fees. No hidden surprises.</p>
           </div>
         </div>
         <div class="proof-metric">
@@ -768,29 +847,29 @@
 <section class="risk-section" id="risk">
   <div class="risk-inner">
     <div class="risk-left fade-up">
-      <h2>It starts with a 15-minute call.</h2>
-      <p>15 minutes. Free. We'll tell you honestly whether we can help, and if we can't, we'll say so upfront. No pitch. No pressure.</p>
+      <h2>It starts with a discovery call.</h2>
+      <p>No pitch. No pressure. We'll tell you honestly whether we can help, and if we can't, we'll say so upfront.</p>
     </div>
     <div class="risk-items">
       <div class="risk-item fade-up">
         <div class="risk-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
         <div class="risk-item-text">
-          <strong>No retainer, no upfront fee</strong>
-          <span>You pay only when you make a hire. Zero cost to starting the conversation.</span>
+          <strong>No fee until your hire starts</strong>
+          <span>You pay only when your new hire walks in the door. Zero cost to starting the conversation.</span>
         </div>
       </div>
       <div class="risk-item fade-up d1">
         <div class="risk-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
         <div class="risk-item-text">
-          <strong>15 minutes, not a 2-hour intake</strong>
-          <span>We get what we need quickly and start immediately. No lengthy onboarding.</span>
+          <strong>Shortlist in 10 days or less</strong>
+          <span>We move on startup timelines because we draw from an existing pipeline, not starting from zero.</span>
         </div>
       </div>
       <div class="risk-item fade-up d2">
         <div class="risk-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
         <div class="risk-item-text">
           <strong>You stay in control</strong>
-          <span>We make introductions. You make the call. No commission-driven pressure.</span>
+          <span>We make introductions and give you our ranked recommendation. You make the final call. No commission-driven pressure.</span>
         </div>
       </div>
       <div class="risk-item fade-up d3">
@@ -808,15 +887,16 @@
 <section class="cta-section" id="book">
   <div class="cta-inner">
     <div class="section-label fade-up">Let's talk</div>
-    <h2 class="fade-up">Book 15 minutes.<br>We'll be straight with you.</h2>
+    <h2 class="fade-up">Book a discovery call.<br>We'll be straight with you.</h2>
     <p class="cta-sub fade-up">
       We'll tell you what we can do, what it costs, and how fast we can move. If it's not a fit, we'll say so in the first five minutes.
     </p>
     <div class="cta-btns fade-up">
-      <a href="https://calendly.com/startupx-recruiting/30min" target="_blank" rel="noopener" class="btn btn-copper">Book a Free 15-Minute Call &rarr;</a>
+      <a href="https://calendly.com/startupx-recruiting/30min" target="_blank" rel="noopener" class="btn btn-copper">Book a No-Obligation Discovery Call &rarr;</a>
       <a href="mailto:startupx.recruiting@gmail.com" class="btn btn-outline">Send us a note</a>
     </div>
-    <p class="cta-trust fade-up"><span>$0 upfront</span> &nbsp;&middot;&nbsp; Toronto, Montreal, Vancouver &nbsp;&middot;&nbsp; Seed to Series A</p>
+    <a href="intake.html" class="intake-nudge fade-up">Prefer to submit a brief first? <span>Start here →</span></a>
+    <p class="cta-trust fade-up"><span>Success-fee only</span> &nbsp;&middot;&nbsp; Toronto, Montreal, Vancouver &nbsp;&middot;&nbsp; Seed to Series A</p>
   </div>
 </section>
 
@@ -826,7 +906,7 @@
     <a href="#top" aria-label="StartupX">
       <img src="startupx-logo.png" class="footer-logo" alt="StartupX" />
     </a>
-    <span class="footer-tagline">Founder-first recruiting for Canadian startups</span>
+    <span class="footer-tagline">Built for founders and revenue leaders at Canadian startups</span>
   </div>
   <div class="footer-right">
     Toronto &middot; Montreal &middot; Vancouver<br>
