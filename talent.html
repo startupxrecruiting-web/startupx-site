@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StartupX Revenue Talent Network</title>
+  <meta name="description" content="Join the StartupX Revenue Talent Network to be considered for startup roles across sales, GTM, RevOps, partnerships, business development, and operator teams." />
+  <meta property="og:title" content="StartupX Revenue Talent Network" />
+  <meta property="og:description" content="Get considered for startup-ready revenue and GTM roles at Seed to Series A companies." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="startupx-logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:         #080808;
+      --dark-1:        #0E0E0E;
+      --dark-2:        #141414;
+      --dark-3:        #1C1C1C;
+      --dark-4:        #262626;
+      --cream:         #CBC6BB;
+      --cream-hi:      #E4DDD3;
+      --cream-lo:      #8E8880;
+      --cream-dim:     rgba(203,198,187,0.07);
+      --cream-border:  rgba(203,198,187,0.12);
+      --copper:        #B87333;
+      --copper-hi:     #D08B45;
+      --copper-dim:    rgba(184,115,51,0.12);
+      --copper-border: rgba(184,115,51,0.28);
+      --border-dark:   #1F1F1F;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--black);
+      color: var(--cream-hi);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.65;
+      font-size: 17px;
+    }
+
+    /* ████ NAV ████ */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 52px; height: 76px;
+      background: rgba(8,8,8,0.96);
+      backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid rgba(255,255,255,0.045);
+    }
+    .nav-logo { display: block; height: 34px; width: auto; }
+    .nav-right { display: flex; align-items: center; gap: 32px; }
+    .nav-link {
+      font-size: 13px; font-weight: 500; color: var(--cream-lo);
+      text-decoration: none; transition: color 0.2s;
+      letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .nav-link:hover { color: var(--cream); }
+    .nav-link.active { color: var(--copper); }
+
+    /* ████ BUTTONS ████ */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700;
+      letter-spacing: 0.07em; text-transform: uppercase; text-decoration: none;
+      border-radius: 2px; transition: all 0.2s; cursor: pointer; border: none;
+      white-space: nowrap;
+    }
+    .btn-copper {
+      background: var(--copper); color: #fff;
+      padding: 14px 28px;
+    }
+    .btn-copper:hover {
+      background: var(--copper-hi); transform: translateY(-1px);
+      box-shadow: 0 8px 28px rgba(184,115,51,0.3);
+    }
+    .btn-outline {
+      background: transparent; color: var(--cream);
+      padding: 13px 27px; border: 1px solid var(--cream-border);
+    }
+    .btn-outline:hover { border-color: var(--cream); color: var(--cream-hi); background: var(--cream-dim); }
+    .btn-nav {
+      background: transparent; color: var(--cream);
+      padding: 10px 20px; border: 1px solid rgba(203,198,187,0.22);
+      font-size: 12px; letter-spacing: 0.08em;
+    }
+    .btn-nav:hover { background: var(--cream-dim); }
+
+    /* ████ SECTION BASE ████ */
+    section { padding: 96px 52px; }
+    .section-inner { max-width: 1080px; margin: 0 auto; }
+    .section-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--copper);
+      margin-bottom: 18px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .section-label::after { content: ''; width: 32px; height: 1px; background: var(--copper-border); }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(40px, 6vw, 76px);
+      font-weight: 900; line-height: 1.02;
+      letter-spacing: -0.03em; color: var(--cream-hi);
+      margin-bottom: 26px;
+    }
+    h1 em { font-style: italic; color: var(--copper); }
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(28px, 3.5vw, 48px);
+      font-weight: 800; line-height: 1.1;
+      letter-spacing: -0.025em; color: var(--cream-hi);
+    }
+    h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(16px, 1.6vw, 20px);
+      font-weight: 700; line-height: 1.25; color: var(--cream-hi);
+    }
+
+    /* fade-up animation */
+    .fade-up { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ████ HERO ████ */
+    .hero {
+      min-height: 100vh;
+      background: var(--black);
+      display: flex; align-items: center;
+      padding: 120px 52px 80px;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 65% 55% at 62% 28%, rgba(184,115,51,0.07) 0%, transparent 65%),
+        radial-gradient(ellipse 45% 45% at 18% 72%, rgba(203,198,187,0.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(203,198,187,0.022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(203,198,187,0.022) 1px, transparent 1px);
+      background-size: 64px 64px;
+      pointer-events: none;
+    }
+    .hero-inner { max-width: 1080px; margin: 0 auto; width: 100%; position: relative; z-index: 1; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--copper);
+      margin-bottom: 28px;
+    }
+    .hero-eyebrow::before { content: ''; width: 26px; height: 1.5px; background: var(--copper); }
+    .hero-sub {
+      font-size: clamp(16px, 1.7vw, 19px);
+      color: var(--cream-lo); max-width: 560px;
+      line-height: 1.7; margin-bottom: 18px;
+    }
+    .hero-support {
+      font-size: 15px; color: rgba(142,136,128,0.7);
+      max-width: 520px; line-height: 1.7; margin-bottom: 44px;
+    }
+    .hero-ctas { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 16px; }
+    .hero-free {
+      font-size: 12.5px; color: var(--cream-lo); letter-spacing: 0.01em;
+    }
+    .hero-founder-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 12.5px; color: var(--cream-lo); text-decoration: none;
+      margin-top: 24px; transition: color 0.2s;
+    }
+    .hero-founder-link:hover { color: var(--cream); }
+    .hero-founder-link svg { width: 12px; height: 12px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* ████ TRUST STRIP ████ */
+    .trust-strip {
+      background: var(--dark-1);
+      border-top: 1px solid var(--border-dark);
+      border-bottom: 1px solid var(--border-dark);
+      padding: 0 52px;
+    }
+    .trust-inner {
+      max-width: 1080px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+    .trust-item {
+      padding: 36px 40px;
+      border-right: 1px solid var(--border-dark);
+      display: flex; align-items: flex-start; gap: 16px;
+    }
+    .trust-item:last-child { border-right: none; }
+    .trust-icon {
+      width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
+      background: var(--copper-dim); border: 1px solid var(--copper-border);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .trust-icon svg { width: 15px; height: 15px; stroke: var(--copper); fill: none; stroke-width: 2; stroke-linecap: round; }
+    .trust-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px; font-weight: 700; color: var(--cream-hi);
+      margin-bottom: 4px; letter-spacing: -0.01em;
+    }
+    .trust-desc { font-size: 13px; color: var(--cream-lo); line-height: 1.55; }
+
+    /* ████ WHAT THIS IS ████ */
+    .what-section { background: var(--black); }
+    .what-body {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+      align-items: start; margin-top: 52px;
+    }
+    .what-text p {
+      font-size: 17px; color: var(--cream-lo); line-height: 1.75;
+      margin-bottom: 20px;
+    }
+    .what-text p:last-child { margin-bottom: 0; }
+    .what-fit {
+      background: var(--copper-dim);
+      border: 1px solid var(--copper-border);
+      border-left: 3px solid var(--copper);
+      border-radius: 0 2px 2px 0;
+      padding: 24px 28px;
+    }
+    .what-fit p { font-size: 15px; color: var(--cream); line-height: 1.7; margin: 0; }
+
+    /* ████ ROLES ████ */
+    .roles-section {
+      background: var(--dark-1);
+      border-top: 1px solid var(--border-dark);
+      border-bottom: 1px solid var(--border-dark);
+    }
+    .roles-grid {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      margin-top: 40px;
+    }
+    .role-pill {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 10px 18px;
+      border: 1px solid var(--cream-border);
+      border-radius: 2px;
+      color: var(--cream);
+      background: var(--dark-2);
+      transition: all 0.18s;
+    }
+    .role-pill:hover {
+      border-color: var(--copper-border);
+      color: var(--copper-hi);
+      background: var(--copper-dim);
+    }
+
+    /* ████ WHO THIS IS FOR ████ */
+    .who-section { background: var(--black); }
+    .who-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+      margin-top: 52px;
+    }
+    .who-list { list-style: none; }
+    .who-list li {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border-dark);
+      font-size: 16px; color: var(--cream-lo); line-height: 1.6;
+    }
+    .who-list li:last-child { border-bottom: none; }
+    .who-check {
+      width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0;
+      background: var(--copper-dim); border: 1px solid var(--copper-border);
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 2px;
+    }
+    .who-check svg { width: 9px; height: 9px; stroke: var(--copper); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .who-note {
+      padding: 28px 32px;
+      background: var(--dark-2);
+      border: 1px solid var(--border-dark);
+      border-radius: 2px;
+      font-size: 14.5px; color: var(--cream-lo); line-height: 1.7;
+      align-self: center;
+    }
+    .who-note strong { color: var(--cream); display: block; margin-bottom: 10px; font-size: 13px; letter-spacing: 0.04em; }
+
+    /* ████ WHY JOIN ████ */
+    .why-section {
+      background: var(--dark-1);
+      border-top: 1px solid var(--border-dark);
+      border-bottom: 1px solid var(--border-dark);
+    }
+    .why-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+      background: var(--border-dark); border: 1px solid var(--border-dark);
+      margin-top: 52px;
+    }
+    .why-card {
+      background: var(--dark-2); padding: 32px 28px;
+      transition: background 0.18s;
+    }
+    .why-card:hover { background: var(--dark-3); }
+    .why-num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 28px; font-weight: 900; color: var(--copper-border);
+      line-height: 1; margin-bottom: 16px;
+    }
+    .why-card h3 { font-size: 15px; font-weight: 700; color: var(--cream-hi); margin-bottom: 8px; }
+    .why-card p { font-size: 13.5px; color: var(--cream-lo); line-height: 1.65; }
+
+    /* ████ HOW IT WORKS ████ */
+    .how-section { background: var(--black); }
+    .how-steps {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+      background: var(--border-dark); border: 1px solid var(--border-dark);
+      margin-top: 52px;
+    }
+    .how-step {
+      background: var(--dark-2); padding: 36px 32px;
+      position: relative;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+    .how-step:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.1); transform: translateY(-2px); }
+    .step-num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--copper);
+      margin-bottom: 18px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .step-num::before {
+      content: ''; width: 18px; height: 1.5px; background: var(--copper-border);
+    }
+    .how-step h3 { margin-bottom: 12px; font-size: 16px; }
+    .how-step p { font-size: 14px; color: var(--cream-lo); line-height: 1.65; }
+    .how-tag {
+      display: inline-block; margin-top: 18px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9.5px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--cream-lo);
+      padding: 6px 0; border-top: 1px solid var(--border-dark);
+      width: 100%;
+    }
+
+    /* ████ FOUNDER NOTE ████ */
+    .founder-section { background: var(--dark-1); border-top: 1px solid var(--border-dark); border-bottom: 1px solid var(--border-dark); }
+    .founder-card {
+      background: var(--dark-2);
+      border: 1px solid var(--border-dark);
+      border-radius: 2px;
+      padding: 48px 52px;
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 48px;
+      margin-top: 52px;
+    }
+    .founder-card-left { max-width: 560px; }
+    .founder-card-left p { font-size: 16px; color: var(--cream-lo); line-height: 1.75; margin-top: 18px; }
+    .founder-card-right { flex-shrink: 0; display: flex; align-items: center; }
+
+    /* ████ FINAL CTA ████ */
+    .final-cta {
+      background: var(--black);
+      text-align: center; padding: 120px 52px;
+    }
+    .final-cta h2 { margin-bottom: 20px; max-width: 640px; margin-left: auto; margin-right: auto; }
+    .final-cta p { font-size: 17px; color: var(--cream-lo); max-width: 440px; margin: 0 auto 44px; line-height: 1.7; }
+    .final-cta .btn { margin: 0 auto; }
+    .final-trust {
+      margin-top: 20px;
+      font-size: 12.5px; color: rgba(142,136,128,0.55);
+      letter-spacing: 0.02em;
+    }
+
+    /* ████ FOOTER ████ */
+    footer {
+      background: var(--black);
+      border-top: 1px solid var(--border-dark);
+      padding: 36px 52px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .footer-left { display: flex; align-items: center; gap: 24px; }
+    .footer-logo { display: block; height: 26px; width: auto; }
+    .footer-tagline { font-size: 12.5px; color: var(--cream-lo); letter-spacing: 0.01em; }
+    .footer-right { display: flex; align-items: center; gap: 20px; }
+    .footer-link {
+      font-size: 12.5px; color: var(--cream-lo);
+      text-decoration: none; transition: color 0.2s;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .footer-link:hover { color: var(--cream); }
+    .footer-link svg { width: 14px; height: 14px; fill: currentColor; }
+
+    /* ████ MOBILE ████ */
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; height: 64px; }
+      .nav-right { gap: 16px; }
+      .nav-link { display: none; }
+      .nav-link.talent-nav { display: block; }
+
+      section { padding: 64px 20px; }
+      .trust-strip { padding: 0 20px; }
+      .hero { padding: 100px 20px 64px; }
+      .final-cta { padding: 80px 20px; }
+      footer { padding: 28px 20px; flex-direction: column; align-items: flex-start; gap: 20px; }
+
+      .trust-inner { grid-template-columns: 1fr; }
+      .trust-item { border-right: none; border-bottom: 1px solid var(--border-dark); padding: 28px 20px; }
+      .trust-item:last-child { border-bottom: none; }
+
+      .what-body { grid-template-columns: 1fr; gap: 40px; }
+      .who-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .how-steps { grid-template-columns: 1fr; }
+
+      .founder-card { flex-direction: column; padding: 32px 28px; gap: 28px; }
+      .founder-card-right { width: 100%; justify-content: flex-start; }
+
+      .roles-grid { gap: 8px; }
+      .role-pill { font-size: 11px; padding: 9px 14px; }
+
+      h1 { font-size: clamp(36px, 10vw, 52px); }
+    }
+
+    @media (max-width: 480px) {
+      .btn-copper { padding: 14px 22px; font-size: 12px; }
+      .hero-ctas { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" aria-label="StartupX">
+    <img src="startupx-logo.png" class="nav-logo" alt="StartupX" />
+  </a>
+  <div class="nav-right">
+    <a href="index.html" class="nav-link">For Startups</a>
+    <a href="talent.html" class="nav-link active talent-nav">Talent Network</a>
+    <a href="https://airtable.com/app6PcD61yrSMFbhg/pag9Ky3wwq2eAOKPN/form" target="_blank" rel="noopener" class="btn btn-nav">Submit Profile</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-eyebrow fade-up">Revenue Talent Network</div>
+    <h1 class="fade-up">Join the StartupX<br><em>Revenue Talent</em><br>Network.</h1>
+    <p class="hero-sub fade-up">Get considered for startup roles across sales, GTM, RevOps, partnerships, business development, and early-stage operator teams.</p>
+    <p class="hero-support fade-up">StartupX works with Seed to Series A companies looking for people who can execute, communicate clearly, learn fast, and take ownership in fast-moving environments.</p>
+    <div class="hero-ctas fade-up">
+      <a href="https://airtable.com/app6PcD61yrSMFbhg/pag9Ky3wwq2eAOKPN/form" target="_blank" rel="noopener" class="btn btn-copper">Submit Your Profile</a>
+      <a href="index.html" class="btn btn-outline">For Startups Hiring</a>
+    </div>
+    <p class="hero-free fade-up">Free to join. We only reach out when there's a relevant fit.</p>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-item fade-up">
+      <div class="trust-icon">
+        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div>
+        <div class="trust-title">Curated, not mass apply</div>
+        <p class="trust-desc">Your profile is reviewed by a person. We don't blast resumes or run bulk submissions.</p>
+      </div>
+    </div>
+    <div class="trust-item fade-up">
+      <div class="trust-icon">
+        <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
+      <div>
+        <div class="trust-title">Startup-ready revenue roles</div>
+        <p class="trust-desc">AE, BDR, RevOps, GTM, CS, partnerships, ops &#8212; the roles that move early-stage companies forward.</p>
+      </div>
+    </div>
+    <div class="trust-item fade-up">
+      <div class="trust-icon">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div>
+        <div class="trust-title">Direct support through the process</div>
+        <p class="trust-desc">When we reach out, we give you context on the role, the company, and what they're actually looking for.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT THIS IS -->
+<section class="what-section" id="what">
+  <div class="section-inner">
+    <div class="section-label fade-up">What this network is</div>
+    <h2 class="fade-up">Not a job board.<br>A curated talent pipeline.</h2>
+    <div class="what-body">
+      <div class="what-text fade-up">
+        <p>StartupX is building a curated network of candidates interested in working with early-stage startups. We work directly with founders and revenue leaders at Seed to Series A companies to fill critical revenue and GTM roles.</p>
+        <p>When you submit your profile, you're not applying to a specific job. We keep you in mind, and when there's a strong match &#8212; on role type, stage, and fit &#8212; we reach out with the details.</p>
+        <p>We do not blast your resume everywhere. We do not run you through a generic screening call. We look for relevant fit and make targeted introductions.</p>
+      </div>
+      <div class="fade-up">
+        <div class="what-fit">
+          <p>If you're interested in startup revenue, GTM, RevOps, partnerships, customer-facing, or operator roles &#8212; and you want to work at an early-stage company &#8212; this is where you should be.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROLES -->
+<section class="roles-section" id="roles">
+  <div class="section-inner">
+    <div class="section-label fade-up">Roles we keep an eye out for</div>
+    <h2 class="fade-up">Revenue and GTM roles<br>across the full stack.</h2>
+    <div class="roles-grid fade-up">
+      <div class="role-pill">Account Executive</div>
+      <div class="role-pill">BDR / SDR</div>
+      <div class="role-pill">RevOps</div>
+      <div class="role-pill">Partnerships</div>
+      <div class="role-pill">Business Development</div>
+      <div class="role-pill">Account Management</div>
+      <div class="role-pill">GTM / Growth</div>
+      <div class="role-pill">Customer Success</div>
+      <div class="role-pill">Startup Operations</div>
+      <div class="role-pill">Founder-adjacent Operator</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO THIS IS FOR -->
+<section class="who-section" id="who">
+  <div class="section-inner">
+    <div class="section-label fade-up">Who should join</div>
+    <h2 class="fade-up">Built for people who want<br>to build, not just apply.</h2>
+    <div class="who-grid fade-up">
+      <ul class="who-list">
+        <li>
+          <span class="who-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Want to work at a Seed to Series A startup
+        </li>
+        <li>
+          <span class="who-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Interested in sales, GTM, RevOps, partnerships, or operator roles
+        </li>
+        <li>
+          <span class="who-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Communicate clearly and follow through
+        </li>
+        <li>
+          <span class="who-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Comfortable with ambiguity and moving fast
+        </li>
+        <li>
+          <span class="who-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Want real responsibility, not just a title
+        </li>
+        <li>
+          <span class="who-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Learn quickly and take initiative without being managed closely
+        </li>
+        <li>
+          <span class="who-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Care about building, not just having a job
+        </li>
+      </ul>
+      <div class="who-note">
+        <strong>A note on experience</strong>
+        You don't need the perfect resume. But you should be serious about working in a startup environment &#8212; the pace, the ownership, and the expectations that come with it.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY JOIN -->
+<section class="why-section" id="why">
+  <div class="section-inner">
+    <div class="section-label fade-up">Why join the network</div>
+    <h2 class="fade-up">Get considered without<br>mass applying into the void.</h2>
+    <div class="why-grid fade-up">
+      <div class="why-card">
+        <div class="why-num">01</div>
+        <h3>Relevant opportunities only</h3>
+        <p>We only reach out when there's a genuine match on role type, stage, and your background. No spam, no generic job blasts.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">02</div>
+        <h3>Context before you interview</h3>
+        <p>When we contact you, we give you the full picture &#8212; the company, the role, what they're looking for, and why we think it's a fit.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">03</div>
+        <h3>Someone who gets early-stage</h3>
+        <p>We understand what founders actually look for. We help translate that for candidates &#8212; so you know what you're walking into.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">04</div>
+        <h3>No resume black hole</h3>
+        <p>Your profile is reviewed. When there's no fit today, we keep you in the pipeline for future opportunities.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">05</div>
+        <h3>Direct process support</h3>
+        <p>We stay involved through the process &#8212; coordination, communication, and making sure both sides have what they need.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">06</div>
+        <h3>Free to join</h3>
+        <p>There's no cost to candidates, ever. We're paid by the startups we work with, only when a hire is made.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how">
+  <div class="section-inner">
+    <div class="section-label fade-up">How it works</div>
+    <h2 class="fade-up">Simple process.<br>No surprises.</h2>
+    <div class="how-steps fade-up">
+      <div class="how-step">
+        <div class="step-num">Step 01</div>
+        <h3>Submit your profile</h3>
+        <p>Fill out the short form with your background, target role types, and what kind of startup environment you're looking for.</p>
+        <span class="how-tag">Takes under 5 minutes</span>
+      </div>
+      <div class="how-step">
+        <div class="step-num">Step 02</div>
+        <h3>We review your background</h3>
+        <p>We look at your experience, target roles, and startup fit. We're assessing for ownership mindset and whether you're a match for the kinds of companies we work with.</p>
+        <span class="how-tag">Reviewed by a person, not an algorithm</span>
+      </div>
+      <div class="how-step">
+        <div class="step-num">Step 03</div>
+        <h3>We reach out when there's a fit</h3>
+        <p>When a relevant opportunity comes up, we contact you with full context &#8212; the role, the company, and why we think it's worth your time. No pressure. No obligation.</p>
+        <span class="how-tag">Only when there's a relevant match</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER NOTE -->
+<section class="founder-section" id="founders">
+  <div class="section-inner">
+    <div class="section-label fade-up">For founders and revenue leaders</div>
+    <div class="founder-card fade-up">
+      <div class="founder-card-left">
+        <h2>Hiring for revenue<br>or GTM roles?</h2>
+        <p>StartupX helps Seed to Series A teams hire startup-ready talent across AE, BDR/SDR, RevOps, partnerships, business development, and early GTM roles. Success-fee only. Shortlist in 10 days.</p>
+      </div>
+      <div class="founder-card-right">
+        <a href="mailto:startupx.recruiting@gmail.com" class="btn btn-outline">Talk to StartupX &#8594;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="join">
+  <div class="section-label fade-up" style="justify-content:center;">Ready to be considered</div>
+  <h2 class="fade-up">Join the talent network.</h2>
+  <p class="fade-up">Submit your profile and we'll keep you in mind for relevant startup opportunities.</p>
+  <a href="https://airtable.com/app6PcD61yrSMFbhg/pag9Ky3wwq2eAOKPN/form" target="_blank" rel="noopener" class="btn btn-copper fade-up">Join the Talent Network</a>
+  <p class="final-trust fade-up">Free to join. No spam. We only reach out when there is a potential fit.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    <a href="index.html" aria-label="StartupX">
+      <img src="startupx-logo.png" class="footer-logo" alt="StartupX" />
+    </a>
+    <span class="footer-tagline">Founder-first recruiting for Seed to Series A startups.</span>
+  </div>
+  <div class="footer-right">
+    <a href="mailto:startupx.recruiting@gmail.com" class="footer-link">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      startupx.recruiting@gmail.com
+    </a>
+    <a href="https://www.linkedin.com/company/startupx2025/" target="_blank" rel="noopener" class="footer-link" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </a>
+    <a href="https://instagram.com/startupx.co" target="_blank" rel="noopener" class="footer-link" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+    </a>
+  </div>
+</footer>
+
+<script>
+  // Fade-up on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
