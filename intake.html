@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>StartupX — Start Your Search</title>
-      <link rel="icon" type="image/png" href="/startupx-logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -327,6 +326,27 @@
     .field-input:focus { border-color: var(--copper); }
     .field-input.full { grid-column: 1 / -1; }
 
+    /* File upload */
+    .file-upload-area {
+      display: block;
+      background: var(--dark-2);
+      border: 1px dashed rgba(203,198,187,0.18);
+      border-radius: 2px;
+      padding: 20px 18px;
+      cursor: pointer;
+      transition: border-color 0.2s;
+      text-align: center;
+    }
+    .file-upload-area:hover { border-color: var(--copper-border); }
+    .file-upload-area input[type="file"] { display: none; }
+    .file-upload-text { font-size: 13.5px; color: var(--cream-lo); line-height: 1.5; }
+    .file-upload-text strong { color: var(--cream); font-weight: 500; }
+    .file-selected { font-size: 12px; color: var(--copper); margin-top: 6px; display: none; }
+    .field-hint {
+      font-size: 12px; color: var(--cream-lo); opacity: 0.55;
+      margin-top: 8px; line-height: 1.5;
+    }
+
     /* Nav buttons */
     .form-nav {
       display: flex; align-items: center; justify-content: space-between;
@@ -534,7 +554,22 @@
 
           <div class="field-group">
             <label class="field-label">Describe the role <span>— in your own words</span></label>
-            <textarea class="field-textarea" placeholder="What does success look like in the first 90 days? What kind of person thrives at your stage? Anything that helps us understand what you're actually looking for." rows="5"></textarea>
+            <textarea class="field-textarea" id="field-description" placeholder="Describe the role, core skills required, and what success looks like in the first 90 days. For revenue roles, include sales motion, quota/pipeline expectations, buyer type, or tools if relevant. Also mention what kind of person thrives at your stage." rows="5"></textarea>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">Existing job posting or role link <span>— optional</span></label>
+            <input class="field-input" id="field-role-link" type="url" placeholder="Paste a LinkedIn, company careers page, Notion, Google Doc, or other role link" />
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">Attach role brief or job description <span>— optional</span></label>
+            <label class="file-upload-area" id="file-upload-area">
+              <input type="file" id="field-file" accept=".pdf,.doc,.docx" onchange="handleFileSelect(this)" />
+              <div class="file-upload-text"><strong>Choose a file</strong> or drag and drop</div>
+              <div class="file-selected" id="file-selected-name"></div>
+            </label>
+            <div class="field-hint">Upload a job description, role brief, scorecard, or any document that helps explain the search. PDF, DOC, or DOCX.</div>
           </div>
 
           <div class="field-group">
@@ -677,6 +712,17 @@
       document.getElementById('success').classList.add('active');
     }
 
+    function handleFileSelect(input) {
+      const name = input.files[0]?.name;
+      const nameEl = document.getElementById('file-selected-name');
+      if (name) {
+        nameEl.textContent = name;
+        nameEl.style.display = 'block';
+      } else {
+        nameEl.style.display = 'none';
+      }
+    }
+
     async function submitForm() {
       const email = document.getElementById('field-email').value.trim();
       const firstName = document.getElementById('field-first').value.trim();
@@ -690,28 +736,52 @@
 
       const roles = [...document.querySelectorAll('.chip.selected')].map(c => c.textContent).join(', ');
       const stage = document.querySelector('.stage-chip.selected')?.textContent.trim().split('\n')[0] || 'Not specified';
-      const description = document.querySelector('.field-textarea')?.value.trim() || '';
+      const description = document.getElementById('field-description')?.value.trim() || '';
       const timeline = document.querySelector('.timeline-chip.selected')?.textContent.trim().split('\n')[0] || 'Not specified';
+      const existingRoleLink = document.getElementById('field-role-link')?.value.trim() || '';
+      const fileInput = document.getElementById('field-file');
+      const file = fileInput?.files[0];
 
       const submitBtn = document.querySelector('.btn-next.submit');
       submitBtn.textContent = 'Sending…';
       submitBtn.disabled = true;
 
       try {
-        const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify({
-            name: `${firstName} ${lastName}`,
-            email,
-            company,
-            roles: roles || 'Not selected',
-            stage,
-            timeline,
-            description: description || 'Not provided',
-            _subject: `New intake: ${firstName} ${lastName} — ${company}`
-          })
-        });
+        let res;
+        if (file) {
+          const fd = new FormData();
+          fd.append('name', `${firstName} ${lastName}`);
+          fd.append('email', email);
+          fd.append('company', company);
+          fd.append('roles', roles || 'Not selected');
+          fd.append('stage', stage);
+          fd.append('timeline', timeline);
+          fd.append('description', description || 'Not provided');
+          fd.append('existing_role_link', existingRoleLink || 'Not provided');
+          fd.append('_subject', `New intake: ${firstName} ${lastName} at ${company}`);
+          fd.append('attachment', file);
+          res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: fd
+          });
+        } else {
+          res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({
+              name: `${firstName} ${lastName}`,
+              email,
+              company,
+              roles: roles || 'Not selected',
+              stage,
+              timeline,
+              description: description || 'Not provided',
+              existing_role_link: existingRoleLink || 'Not provided',
+              _subject: `New intake: ${firstName} ${lastName} at ${company}`
+            })
+          });
+        }
 
         if (res.ok) {
           showSuccess();
