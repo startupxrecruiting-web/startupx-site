@@ -3,8 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>StartupX — Start Your Search</title>
+  <meta name="description" content="Tell StartupX about the role you're hiring for. Three short questions about the role, the profile, and your timeline — we follow up with next steps." />
+  <link rel="canonical" href="https://startupxrecruiting.com/intake" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Fonts requested before analytics: the LCP element here is text. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="icon" href="/startupx-logo.png" type="image/png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="StartupX" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:url" content="https://startupxrecruiting.com/intake" />
+  <meta property="og:title" content="StartupX — Start Your Search" />
+  <meta property="og:description" content="Tell StartupX about the role you're hiring for. Three short questions about the role, the profile, and your timeline — we follow up with next steps." />
+  <meta property="og:image" content="https://startupxrecruiting.com/startupx-logo.png" />
+  <meta property="og:image:alt" content="StartupX" />
+
+  <!-- Twitter/X -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="StartupX — Start Your Search" />
+  <meta name="twitter:description" content="Tell StartupX about the role you're hiring for. Three short questions about the role, the profile, and your timeline — we follow up with next steps." />
+  <meta name="twitter:image" content="https://startupxrecruiting.com/startupx-logo.png" />
+
   <!-- Google tag (gtag.js) -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MX66XYE7LL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -12,9 +41,6 @@
     gtag('js', new Date());
     gtag('config', 'G-MX66XYE7LL');
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -232,6 +258,16 @@
       font-family: 'Inter', sans-serif;
     }
 
+    /* Keyboard focus indicator. The chips are div-based custom controls,
+       so they need an explicit outline once they become focusable.
+       :focus-visible means mouse users see no change. */
+    .chip:focus-visible,
+    .stage-chip:focus-visible,
+    .timeline-chip:focus-visible {
+      outline: 2px solid var(--copper);
+      outline-offset: 2px;
+    }
+
     /* Chip selectors */
     .chip-grid {
       display: flex; flex-wrap: wrap; gap: 8px;
@@ -445,8 +481,8 @@
 <body>
 
   <header>
-    <a href="index.html" aria-label="StartupX"><img src="startupx-logo.png" class="logo" alt="StartupX" /></a>
-    <a href="index.html" class="header-back">
+    <a href="/" aria-label="StartupX"><img src="/startupx-logo.png" class="logo" alt="StartupX" /></a>
+    <a href="/" class="header-back">
       <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
       Back to site
     </a>
@@ -512,34 +548,34 @@
           <p class="panel-sub">Pick everything that applies. If it's not listed, you can describe it in step two.</p>
 
           <div class="field-group">
-            <label class="field-label">Role type <span>— select all that apply</span></label>
-            <div class="chip-grid">
-              <div class="chip" onclick="toggleChip(this)">Account Executive</div>
-              <div class="chip" onclick="toggleChip(this)">BDR / SDR</div>
-              <div class="chip" onclick="toggleChip(this)">Inside Sales Rep</div>
-              <div class="chip" onclick="toggleChip(this)">Revenue Operations</div>
-              <div class="chip" onclick="toggleChip(this)">GTM Lead</div>
-              <div class="chip" onclick="toggleChip(this)">Partnerships</div>
-              <div class="chip" onclick="toggleChip(this)">Account Management</div>
-              <div class="chip" onclick="toggleChip(this)">Business Development</div>
-              <div class="chip" onclick="toggleChip(this)">Customer Success</div>
-              <div class="chip" onclick="toggleChip(this)">Operations / Systems</div>
-              <div class="chip" onclick="toggleChip(this)">Other</div>
+            <span class="field-label" id="lbl-role-type">Role type <span>— select all that apply</span></span>
+            <div class="chip-grid" role="group" aria-labelledby="lbl-role-type">
+              <div class="chip" role="checkbox" tabindex="0" aria-checked="false" onclick="toggleChip(this)">Account Executive</div>
+              <div class="chip" role="checkbox" tabindex="0" aria-checked="false" onclick="toggleChip(this)">BDR / SDR</div>
+              <div class="chip" role="checkbox" tabindex="0" aria-checked="false" onclick="toggleChip(this)">Inside Sales Rep</div>
+              <div class="chip" role="checkbox" tabindex="0" aria-checked="false" onclick="toggleChip(this)">Revenue Operations</div>
+              <div class="chip" role="checkbox" tabindex="0" aria-checked="false" onclick="toggleChip(this)">GTM Lead</div>
+              <div class="chip" role="checkbox" tabindex="0" aria-checked="false" onclick="toggleChip(this)">Partnerships</div>
+              <div class="chip" role="checkbox" tabindex="0" aria-checked="false" onclick="toggleChip(this)">Account Management</div>
+              <div class="chip" role="checkbox" tabindex="0" aria-checked="false" onclick="toggleChip(this)">Business Development</div>
+              <div class="chip" role="checkbox" tabindex="0" aria-checked="false" onclick="toggleChip(this)">Customer Success</div>
+              <div class="chip" role="checkbox" tabindex="0" aria-checked="false" onclick="toggleChip(this)">Operations / Systems</div>
+              <div class="chip" role="checkbox" tabindex="0" aria-checked="false" onclick="toggleChip(this)">Other</div>
             </div>
           </div>
 
           <div class="field-group">
-            <label class="field-label">Company stage</label>
-            <div class="stage-grid">
-              <div class="stage-chip" onclick="selectOne(this, 'stage')">
+            <span class="field-label" id="lbl-stage">Company stage</span>
+            <div class="stage-grid" role="radiogroup" aria-labelledby="lbl-stage">
+              <div class="stage-chip" role="radio" tabindex="0" aria-checked="false" onclick="selectOne(this, 'stage')">
                 Pre-Seed
                 <span>Pre-revenue</span>
               </div>
-              <div class="stage-chip" onclick="selectOne(this, 'stage')">
+              <div class="stage-chip" role="radio" tabindex="0" aria-checked="false" onclick="selectOne(this, 'stage')">
                 Seed
                 <span>Early traction</span>
               </div>
-              <div class="stage-chip" onclick="selectOne(this, 'stage')">
+              <div class="stage-chip" role="radio" tabindex="0" aria-checked="false" onclick="selectOne(this, 'stage')">
                 Series A
                 <span>Scaling</span>
               </div>
@@ -561,19 +597,19 @@
           <p class="panel-sub">A few sentences is enough. We'll get the full picture on the call.</p>
 
           <div class="field-group">
-            <label class="field-label">Describe the role <span>— in your own words</span></label>
+            <label class="field-label" for="field-description">Describe the role <span>— in your own words</span></label>
             <textarea class="field-textarea" id="field-description" placeholder="Describe the role, core skills required, and what success looks like in the first 90 days. For revenue roles, include sales motion, quota/pipeline expectations, buyer type, or tools if relevant. Also mention what kind of person thrives at your stage." rows="5"></textarea>
           </div>
 
           <div class="field-group">
-            <label class="field-label">Existing job posting or role link <span>— optional</span></label>
+            <label class="field-label" for="field-role-link">Existing job posting or role link <span>— optional</span></label>
             <input class="field-input" id="field-role-link" type="url" placeholder="Paste a LinkedIn, company careers page, Notion, Google Doc, or other role link" />
           </div>
 
           <div class="field-group">
             <label class="field-label">Attach role brief or job description <span>— optional</span></label>
             <label class="file-upload-area" id="file-upload-area">
-              <input type="file" id="field-file" accept=".pdf,.doc,.docx" onchange="handleFileSelect(this)" />
+              <input type="file" id="field-file" aria-label="Attach role brief or job description" accept=".pdf,.doc,.docx" onchange="handleFileSelect(this)" />
               <div class="file-upload-text"><strong>Choose a file</strong> or drag and drop</div>
               <div class="file-selected" id="file-selected-name"></div>
             </label>
@@ -581,21 +617,21 @@
           </div>
 
           <div class="field-group">
-            <label class="field-label">When do you need someone?</label>
-            <div class="timeline-grid">
-              <div class="timeline-chip" onclick="selectOne(this, 'timeline')">
+            <span class="field-label" id="lbl-timeline">When do you need someone?</span>
+            <div class="timeline-grid" role="radiogroup" aria-labelledby="lbl-timeline">
+              <div class="timeline-chip" role="radio" tabindex="0" aria-checked="false" onclick="selectOne(this, 'timeline')">
                 ASAP
                 <span>Role is open now</span>
               </div>
-              <div class="timeline-chip" onclick="selectOne(this, 'timeline')">
+              <div class="timeline-chip" role="radio" tabindex="0" aria-checked="false" onclick="selectOne(this, 'timeline')">
                 Within 30 days
                 <span>Planning ahead</span>
               </div>
-              <div class="timeline-chip" onclick="selectOne(this, 'timeline')">
+              <div class="timeline-chip" role="radio" tabindex="0" aria-checked="false" onclick="selectOne(this, 'timeline')">
                 1–3 months
                 <span>Building the pipeline</span>
               </div>
-              <div class="timeline-chip" onclick="selectOne(this, 'timeline')">
+              <div class="timeline-chip" role="radio" tabindex="0" aria-checked="false" onclick="selectOne(this, 'timeline')">
                 Exploring
                 <span>Figuring out timing</span>
               </div>
@@ -620,12 +656,12 @@
           <p class="panel-sub">We'll follow up within one business day. No pitch. We'll tell you straight whether we can help.</p>
 
           <div class="field-group">
-            <label class="field-label">Your details</label>
+            <span class="field-label" id="lbl-details">Your details</span>
             <div class="input-row">
-              <input class="field-input" id="field-first" type="text" placeholder="First name" />
-              <input class="field-input" id="field-last" type="text" placeholder="Last name" />
-              <input class="field-input full" id="field-email" type="email" placeholder="Work email" />
-              <input class="field-input full" id="field-company" type="text" placeholder="Company name" />
+              <input class="field-input" id="field-first" aria-label="First name" type="text" placeholder="First name" />
+              <input class="field-input" id="field-last" aria-label="Last name" type="text" placeholder="Last name" />
+              <input class="field-input full" id="field-email" aria-label="Work email" type="email" placeholder="Work email" />
+              <input class="field-input full" id="field-company" aria-label="Company name" type="text" placeholder="Company name" />
             </div>
           </div>
 
@@ -808,14 +844,26 @@
 
     function toggleChip(el) {
       el.classList.toggle('selected');
+      el.setAttribute('aria-checked', el.classList.contains('selected'));
     }
 
     function selectOne(el, group) {
       el.closest('.' + group + '-grid, .stage-grid, .timeline-grid')
         .querySelectorAll('.stage-chip, .timeline-chip')
-        .forEach(c => c.classList.remove('selected'));
+        .forEach(c => { c.classList.remove('selected'); c.setAttribute('aria-checked', 'false'); });
       el.classList.add('selected');
+      el.setAttribute('aria-checked', 'true');
     }
+
+    // The chips are div-based controls, so Enter/Space must be wired up by
+    // hand to match what a native checkbox/radio would do.
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Enter' && e.key !== ' ' && e.key !== 'Spacebar') return;
+      var el = e.target.closest('.chip, .stage-chip, .timeline-chip');
+      if (!el) return;
+      e.preventDefault();
+      el.click();
+    });
   </script>
 
 </body>
