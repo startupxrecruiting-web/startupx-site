@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Static site with no build step, so this file is maintained by hand.
+  When you add a page, add one <url> block here.
+  <lastmod> is intentionally omitted: there is no reliable programmatic
+  source for per-page modification dates in this repo, and inaccurate
+  lastmod values are worse than none.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://startupxrecruiting.com/</loc>
+  </url>
+  <url>
+    <loc>https://startupxrecruiting.com/talent</loc>
+  </url>
+  <url>
+    <loc>https://startupxrecruiting.com/intake</loc>
+  </url>
+</urlset>
