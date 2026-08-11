@@ -1,0 +1,44 @@
+# robots.txt — https://startupxrecruiting.com/robots.txt
+# Static site. Every route below is a public marketing page; there are no
+# private, admin, or authenticated routes to protect.
+
+# ── General search engines ────────────────────────────────────────────
+User-agent: *
+Allow: /
+
+# ── OpenAI: two DIFFERENT crawlers, deliberately configured separately ─
+#
+# OAI-SearchBot indexes pages so they can be surfaced and linked as
+# results inside ChatGPT search. Blocking it removes StartupX from that
+# surface entirely. Allowed.
+User-agent: OAI-SearchBot
+Allow: /
+
+# GPTBot crawls content that may be used to train OpenAI models. This is an
+# IP/content decision, NOT a discoverability one: disallowing GPTBot does not
+# remove StartupX from ChatGPT search, which is served by OAI-SearchBot above.
+# StartupX opts out of training access while keeping search access open.
+User-agent: GPTBot
+Disallow: /
+
+# ChatGPT-User fetches a page live when a user asks about it in a chat.
+User-agent: ChatGPT-User
+Allow: /
+
+# ── Other AI search crawlers ──────────────────────────────────────────
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://startupxrecruiting.com/sitemap.xml
