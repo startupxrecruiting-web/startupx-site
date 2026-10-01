@@ -1,0 +1,44 @@
+# Netlify config — replaces vercel.json. Static site, no build step.
+
+[build]
+  publish = "."
+  command = ""
+
+# ── Redirects (mirror vercel.json) ───────────────────────────────────
+# www → apex (canonical host)
+[[redirects]]
+  from = "https://www.startupxrecruiting.com/*"
+  to = "https://startupxrecruiting.com/:splat"
+  status = 301
+  force = true
+
+# Clean URLs: /page.html → /page (Vercel cleanUrls behaviour).
+# Netlify already serves /talent from talent.html.
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/talent.html"
+  to = "/talent"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/intake.html"
+  to = "/intake"
+  status = 301
+  force = true
+
+# ── Security headers (copied verbatim from vercel.json) ──────────────
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.doubleclick.net; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.doubleclick.net https://formspree.io; form-action 'self' https://formspree.io; frame-src https://calendar.google.com https://calendar.app.google https://airtable.com https://*.airtable.com; manifest-src 'self'; upgrade-insecure-requests"
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains"
