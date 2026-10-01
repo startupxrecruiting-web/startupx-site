@@ -1,10 +1,10 @@
-# Netlify config — replaces vercel.json. Static site, no build step.
+# Netlify config. Static site, no build step.
 
 [build]
   publish = "."
   command = ""
 
-# ── Redirects (mirror vercel.json) ───────────────────────────────────
+# ── Redirects ────────────────────────────────────────────────────────
 # www → apex (canonical host)
 [[redirects]]
   from = "https://www.startupxrecruiting.com/*"
@@ -12,7 +12,14 @@
   status = 301
   force = true
 
-# Clean URLs: /page.html → /page (Vercel cleanUrls behaviour).
+# Default Netlify subdomain → apex, so only one hostname is ever indexed
+[[redirects]]
+  from = "https://startupx-site.netlify.app/*"
+  to = "https://startupxrecruiting.com/:splat"
+  status = 301
+  force = true
+
+# Clean URLs: /page.html → /page.
 # Netlify already serves /talent from talent.html.
 [[redirects]]
   from = "/index.html"
@@ -32,7 +39,7 @@
   status = 301
   force = true
 
-# ── Security headers (copied verbatim from vercel.json) ──────────────
+# ── Security headers ─────────────────────────────────────────────────
 [[headers]]
   for = "/*"
   [headers.values]
